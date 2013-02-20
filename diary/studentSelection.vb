@@ -1,4 +1,4 @@
-﻿Public Class selector
+﻿Public Class StudentSelection
     Public toWho As String
     Private Sub button7_Click(sender As Object, e As EventArgs) Handles button7.Click
         Me.Hide()
@@ -50,9 +50,9 @@
 
     Private Sub button2_Click(sender As Object, e As EventArgs) Handles button2.Click
         If listBox1.SelectedItem IsNot Nothing AndAlso listBox1.SelectedItem.ToString() <> "" Then
-            diary.label3.Text = listBox1.SelectedItem
+            StudentGrades.label3.Text = listBox1.SelectedItem
             Me.Hide()
-            diary.Show()
+            StudentGrades.Show()
         End If
     End Sub
 

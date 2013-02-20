@@ -9,7 +9,7 @@
         'If enteredUserName = usernames(i) Then
         ' 'PASS
         Me.Hide()
-        selector.Show()
+        StudentSelection.Show()
         MessageBox.Show("Добре дошли, господине(госпожо(госпожице)) „име""")
         ' Load files
         ' Else
