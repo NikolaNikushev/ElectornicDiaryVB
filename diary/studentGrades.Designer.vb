@@ -22,291 +22,318 @@ Partial Class StudentGrades
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.label12 = New System.Windows.Forms.Label()
-        Me.label11 = New System.Windows.Forms.Label()
-        Me.label10 = New System.Windows.Forms.Label()
-        Me.richTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.label9 = New System.Windows.Forms.Label()
-        Me.label8 = New System.Windows.Forms.Label()
-        Me.label7 = New System.Windows.Forms.Label()
-        Me.label6 = New System.Windows.Forms.Label()
-        Me.label5 = New System.Windows.Forms.Label()
-        Me.label4 = New System.Windows.Forms.Label()
-        Me.label3 = New System.Windows.Forms.Label()
-        Me.label2 = New System.Windows.Forms.Label()
-        Me.button4 = New System.Windows.Forms.Button()
-        Me.label1 = New System.Windows.Forms.Label()
-        Me.listBox1 = New System.Windows.Forms.ListBox()
-        Me.button2 = New System.Windows.Forms.Button()
-        Me.button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.button5 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StudentGrades))
+        Me.labelRemarks = New System.Windows.Forms.Label()
+        Me.remarksView = New System.Windows.Forms.RichTextBox()
+        Me.labelCurrentSemester = New System.Windows.Forms.Label()
+        Me.labelSemster = New System.Windows.Forms.Label()
+        Me.labelStudentAbsence = New System.Windows.Forms.Label()
+        Me.labelGrades = New System.Windows.Forms.Label()
+        Me.labelCurrentStudent = New System.Windows.Forms.Label()
+        Me.subjectAddEditRemove = New System.Windows.Forms.Button()
+        Me.save = New System.Windows.Forms.Button()
+        Me.subjectList = New System.Windows.Forms.ListView()
+        Me.confirmChoice = New System.Windows.Forms.Button()
+        Me.studentGradesList = New System.Windows.Forms.ListView()
+        Me.studentAbsenceList = New System.Windows.Forms.ListView()
+        Me.addGrade = New System.Windows.Forms.Button()
+        Me.addAbsence = New System.Windows.Forms.Button()
+        Me.removeAbsence = New System.Windows.Forms.Button()
+        Me.removeGrade = New System.Windows.Forms.Button()
+        Me.ElectronicDiaryDatabaseDataSet = New diary.ElectronicDiaryDatabaseDataSet()
+        Me.SubjectsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SubjectsTableAdapter = New diary.ElectronicDiaryDatabaseDataSetTableAdapters.SubjectsTableAdapter()
+        Me.TableAdapterManager = New diary.ElectronicDiaryDatabaseDataSetTableAdapters.TableAdapterManager()
+        Me.labelCurrentSubject = New System.Windows.Forms.Label()
+        Me.labelCurrentSubjectNumber = New System.Windows.Forms.Label()
+        Me.labelInfoNumber = New System.Windows.Forms.Label()
+        Me.labelStudentNumber = New System.Windows.Forms.Label()
+        Me.back = New System.Windows.Forms.Button()
+        CType(Me.ElectronicDiaryDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SubjectsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'label12
+        'labelRemarks
         '
-        Me.label12.AutoSize = True
-        Me.label12.Location = New System.Drawing.Point(147, 185)
-        Me.label12.Name = "label12"
-        Me.label12.Size = New System.Drawing.Size(41, 13)
-        Me.label12.TabIndex = 36
-        Me.label12.Text = "label12"
+        Me.labelRemarks.AutoSize = True
+        Me.labelRemarks.Location = New System.Drawing.Point(375, 93)
+        Me.labelRemarks.Name = "labelRemarks"
+        Me.labelRemarks.Size = New System.Drawing.Size(64, 13)
+        Me.labelRemarks.TabIndex = 34
+        Me.labelRemarks.Text = "Зебележки"
         '
-        'label11
+        'remarksView
         '
-        Me.label11.AutoSize = True
-        Me.label11.Location = New System.Drawing.Point(147, 163)
-        Me.label11.Name = "label11"
-        Me.label11.Size = New System.Drawing.Size(41, 13)
-        Me.label11.TabIndex = 35
-        Me.label11.Text = "label11"
+        Me.remarksView.Location = New System.Drawing.Point(302, 118)
+        Me.remarksView.Name = "remarksView"
+        Me.remarksView.Size = New System.Drawing.Size(227, 138)
+        Me.remarksView.TabIndex = 33
+        Me.remarksView.Text = ""
         '
-        'label10
+        'labelCurrentSemester
         '
-        Me.label10.AutoSize = True
-        Me.label10.Location = New System.Drawing.Point(355, 93)
-        Me.label10.Name = "label10"
-        Me.label10.Size = New System.Drawing.Size(64, 13)
-        Me.label10.TabIndex = 34
-        Me.label10.Text = "Зебележки"
+        Me.labelCurrentSemester.AutoSize = True
+        Me.labelCurrentSemester.Location = New System.Drawing.Point(459, 41)
+        Me.labelCurrentSemester.Name = "labelCurrentSemester"
+        Me.labelCurrentSemester.Size = New System.Drawing.Size(35, 13)
+        Me.labelCurrentSemester.TabIndex = 32
+        Me.labelCurrentSemester.Text = "label9"
+        Me.labelCurrentSemester.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'richTextBox1
+        'labelSemster
         '
-        Me.richTextBox1.Location = New System.Drawing.Point(302, 118)
-        Me.richTextBox1.Name = "richTextBox1"
-        Me.richTextBox1.Size = New System.Drawing.Size(178, 96)
-        Me.richTextBox1.TabIndex = 33
-        Me.richTextBox1.Text = ""
+        Me.labelSemster.AutoSize = True
+        Me.labelSemster.Location = New System.Drawing.Point(448, 15)
+        Me.labelSemster.Name = "labelSemster"
+        Me.labelSemster.Size = New System.Drawing.Size(32, 13)
+        Me.labelSemster.TabIndex = 31
+        Me.labelSemster.Text = "Срок"
         '
-        'label9
+        'labelStudentAbsence
         '
-        Me.label9.AutoSize = True
-        Me.label9.Location = New System.Drawing.Point(445, 34)
-        Me.label9.Name = "label9"
-        Me.label9.Size = New System.Drawing.Size(35, 13)
-        Me.label9.TabIndex = 32
-        Me.label9.Text = "label9"
+        Me.labelStudentAbsence.AutoSize = True
+        Me.labelStudentAbsence.Location = New System.Drawing.Point(5, 179)
+        Me.labelStudentAbsence.Name = "labelStudentAbsence"
+        Me.labelStudentAbsence.Size = New System.Drawing.Size(62, 13)
+        Me.labelStudentAbsence.TabIndex = 29
+        Me.labelStudentAbsence.Text = "Отсъствия"
         '
-        'label8
+        'labelGrades
         '
-        Me.label8.AutoSize = True
-        Me.label8.Location = New System.Drawing.Point(448, 15)
-        Me.label8.Name = "label8"
-        Me.label8.Size = New System.Drawing.Size(32, 13)
-        Me.label8.TabIndex = 31
-        Me.label8.Text = "Срок"
+        Me.labelGrades.AutoSize = True
+        Me.labelGrades.Location = New System.Drawing.Point(11, 133)
+        Me.labelGrades.Name = "labelGrades"
+        Me.labelGrades.Size = New System.Drawing.Size(45, 13)
+        Me.labelGrades.TabIndex = 27
+        Me.labelGrades.Text = "Оценки"
         '
-        'label7
+        'labelCurrentStudent
         '
-        Me.label7.AutoSize = True
-        Me.label7.Location = New System.Drawing.Point(-1, 185)
-        Me.label7.Name = "label7"
-        Me.label7.Size = New System.Drawing.Size(123, 13)
-        Me.label7.TabIndex = 30
-        Me.label7.Text = "Среден успех за срока"
+        Me.labelCurrentStudent.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelCurrentStudent.Location = New System.Drawing.Point(5, 11)
+        Me.labelCurrentStudent.MaximumSize = New System.Drawing.Size(200, 100)
+        Me.labelCurrentStudent.Name = "labelCurrentStudent"
+        Me.labelCurrentStudent.Size = New System.Drawing.Size(200, 20)
+        Me.labelCurrentStudent.TabIndex = 26
+        Me.labelCurrentStudent.Text = "Ученик"
         '
-        'label6
+        'subjectAddEditRemove
         '
-        Me.label6.AutoSize = True
-        Me.label6.Location = New System.Drawing.Point(-1, 93)
-        Me.label6.Name = "label6"
-        Me.label6.Size = New System.Drawing.Size(62, 13)
-        Me.label6.TabIndex = 29
-        Me.label6.Text = "Отсъствия"
+        Me.subjectAddEditRemove.Location = New System.Drawing.Point(160, 215)
+        Me.subjectAddEditRemove.Name = "subjectAddEditRemove"
+        Me.subjectAddEditRemove.Size = New System.Drawing.Size(136, 41)
+        Me.subjectAddEditRemove.TabIndex = 20
+        Me.subjectAddEditRemove.Text = "Добави или редактирай час"
+        Me.subjectAddEditRemove.UseVisualStyleBackColor = True
         '
-        'label5
+        'save
         '
-        Me.label5.AutoSize = True
-        Me.label5.Location = New System.Drawing.Point(-1, 207)
-        Me.label5.Name = "label5"
-        Me.label5.Size = New System.Drawing.Size(92, 13)
-        Me.label5.TabIndex = 28
-        Me.label5.Text = "Общо отсъствия"
+        Me.save.Location = New System.Drawing.Point(-2, 224)
+        Me.save.Name = "save"
+        Me.save.Size = New System.Drawing.Size(75, 23)
+        Me.save.TabIndex = 19
+        Me.save.Text = "Запамети"
+        Me.save.UseVisualStyleBackColor = True
         '
-        'label4
+        'subjectList
         '
-        Me.label4.AutoSize = True
-        Me.label4.Location = New System.Drawing.Point(-1, 67)
-        Me.label4.Name = "label4"
-        Me.label4.Size = New System.Drawing.Size(45, 13)
-        Me.label4.TabIndex = 27
-        Me.label4.Text = "Оценки"
+        Me.subjectList.Location = New System.Drawing.Point(211, 2)
+        Me.subjectList.Name = "subjectList"
+        Me.subjectList.Size = New System.Drawing.Size(190, 78)
+        Me.subjectList.TabIndex = 41
+        Me.subjectList.UseCompatibleStateImageBehavior = False
         '
-        'label3
+        'confirmChoice
         '
-        Me.label3.AutoSize = True
-        Me.label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label3.Location = New System.Drawing.Point(5, 11)
-        Me.label3.MaximumSize = New System.Drawing.Size(100, 0)
-        Me.label3.Name = "label3"
-        Me.label3.Size = New System.Drawing.Size(56, 17)
-        Me.label3.TabIndex = 26
-        Me.label3.Text = "Ученик"
+        Me.confirmChoice.Location = New System.Drawing.Point(407, 57)
+        Me.confirmChoice.Name = "confirmChoice"
+        Me.confirmChoice.Size = New System.Drawing.Size(130, 23)
+        Me.confirmChoice.TabIndex = 42
+        Me.confirmChoice.Text = "Потвърди избора"
+        Me.confirmChoice.UseVisualStyleBackColor = True
         '
-        'label2
+        'studentGradesList
         '
-        Me.label2.AutoSize = True
-        Me.label2.Location = New System.Drawing.Point(339, 217)
-        Me.label2.Name = "label2"
-        Me.label2.Size = New System.Drawing.Size(118, 13)
-        Me.label2.TabIndex = 25
-        Me.label2.Text = "Изпрати до родителя:"
+        Me.studentGradesList.Location = New System.Drawing.Point(79, 121)
+        Me.studentGradesList.Name = "studentGradesList"
+        Me.studentGradesList.Size = New System.Drawing.Size(121, 41)
+        Me.studentGradesList.TabIndex = 43
+        Me.studentGradesList.UseCompatibleStateImageBehavior = False
         '
-        'button4
+        'studentAbsenceList
         '
-        Me.button4.Location = New System.Drawing.Point(311, 233)
-        Me.button4.Name = "button4"
-        Me.button4.Size = New System.Drawing.Size(75, 23)
-        Me.button4.TabIndex = 23
-        Me.button4.Text = "Всичко"
-        Me.button4.UseVisualStyleBackColor = True
+        Me.studentAbsenceList.Location = New System.Drawing.Point(79, 168)
+        Me.studentAbsenceList.Name = "studentAbsenceList"
+        Me.studentAbsenceList.Size = New System.Drawing.Size(121, 41)
+        Me.studentAbsenceList.TabIndex = 44
+        Me.studentAbsenceList.UseCompatibleStateImageBehavior = False
         '
-        'label1
+        'addGrade
         '
-        Me.label1.AutoSize = True
-        Me.label1.Location = New System.Drawing.Point(257, 24)
-        Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(80, 13)
-        Me.label1.TabIndex = 22
-        Me.label1.Text = "Преподавател"
+        Me.addGrade.Location = New System.Drawing.Point(210, 133)
+        Me.addGrade.Name = "addGrade"
+        Me.addGrade.Size = New System.Drawing.Size(23, 23)
+        Me.addGrade.TabIndex = 45
+        Me.addGrade.Text = "+"
+        Me.addGrade.UseVisualStyleBackColor = True
         '
-        'listBox1
+        'addAbsence
         '
-        Me.listBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.listBox1.FormattingEnabled = True
-        Me.listBox1.ItemHeight = 25
-        Me.listBox1.Location = New System.Drawing.Point(139, 12)
-        Me.listBox1.Name = "listBox1"
-        Me.listBox1.Size = New System.Drawing.Size(112, 29)
-        Me.listBox1.TabIndex = 21
+        Me.addAbsence.Location = New System.Drawing.Point(210, 179)
+        Me.addAbsence.Name = "addAbsence"
+        Me.addAbsence.Size = New System.Drawing.Size(23, 20)
+        Me.addAbsence.TabIndex = 46
+        Me.addAbsence.Text = "+"
+        Me.addAbsence.UseVisualStyleBackColor = True
         '
-        'button2
+        'removeAbsence
         '
-        Me.button2.Location = New System.Drawing.Point(83, 233)
-        Me.button2.Name = "button2"
-        Me.button2.Size = New System.Drawing.Size(88, 23)
-        Me.button2.TabIndex = 20
-        Me.button2.Text = "Добави Час"
-        Me.button2.UseVisualStyleBackColor = True
+        Me.removeAbsence.Location = New System.Drawing.Point(249, 179)
+        Me.removeAbsence.Name = "removeAbsence"
+        Me.removeAbsence.Size = New System.Drawing.Size(21, 20)
+        Me.removeAbsence.TabIndex = 49
+        Me.removeAbsence.Text = "-"
+        Me.removeAbsence.UseVisualStyleBackColor = True
         '
-        'button1
+        'removeGrade
         '
-        Me.button1.Location = New System.Drawing.Point(2, 233)
-        Me.button1.Name = "button1"
-        Me.button1.Size = New System.Drawing.Size(75, 23)
-        Me.button1.TabIndex = 19
-        Me.button1.Text = "Върни се"
-        Me.button1.UseVisualStyleBackColor = True
+        Me.removeGrade.Location = New System.Drawing.Point(249, 134)
+        Me.removeGrade.Name = "removeGrade"
+        Me.removeGrade.Size = New System.Drawing.Size(21, 22)
+        Me.removeGrade.TabIndex = 48
+        Me.removeGrade.Text = "-"
+        Me.removeGrade.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'ElectronicDiaryDatabaseDataSet
         '
-        Me.TextBox1.Location = New System.Drawing.Point(71, 64)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(51, 20)
-        Me.TextBox1.TabIndex = 37
+        Me.ElectronicDiaryDatabaseDataSet.DataSetName = "ElectronicDiaryDatabaseDataSet"
+        Me.ElectronicDiaryDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'TextBox2
+        'SubjectsBindingSource
         '
-        Me.TextBox2.Location = New System.Drawing.Point(71, 86)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(51, 20)
-        Me.TextBox2.TabIndex = 38
+        Me.SubjectsBindingSource.DataMember = "Subjects"
+        Me.SubjectsBindingSource.DataSource = Me.ElectronicDiaryDatabaseDataSet
         '
-        'Label13
+        'SubjectsTableAdapter
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(-1, 163)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(142, 13)
-        Me.Label13.TabIndex = 39
-        Me.Label13.Text = "Среден успех за предмета"
+        Me.SubjectsTableAdapter.ClearBeforeFill = True
         '
-        'Label14
+        'TableAdapterManager
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(147, 207)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(45, 13)
-        Me.Label14.TabIndex = 40
-        Me.Label14.Text = "Label14"
+        Me.TableAdapterManager.AccountsTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Message_Log_To_ParentsTableAdapter = Nothing
+        Me.TableAdapterManager.Message_Log_To_StudentsTableAdapter = Nothing
+        Me.TableAdapterManager.Student_DataTableAdapter = Nothing
+        Me.TableAdapterManager.SubjectsTableAdapter = Me.SubjectsTableAdapter
+        Me.TableAdapterManager.Summary_LogTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = diary.ElectronicDiaryDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'button5
+        'labelCurrentSubject
         '
-        Me.button5.Location = New System.Drawing.Point(392, 233)
-        Me.button5.Name = "button5"
-        Me.button5.Size = New System.Drawing.Size(102, 23)
-        Me.button5.TabIndex = 24
-        Me.button5.Text = "Само промените"
-        Me.button5.UseVisualStyleBackColor = True
+        Me.labelCurrentSubject.AutoSize = True
+        Me.labelCurrentSubject.Location = New System.Drawing.Point(232, 93)
+        Me.labelCurrentSubject.Name = "labelCurrentSubject"
+        Me.labelCurrentSubject.Size = New System.Drawing.Size(0, 13)
+        Me.labelCurrentSubject.TabIndex = 50
         '
-        'Button3
+        'labelCurrentSubjectNumber
         '
-        Me.Button3.Location = New System.Drawing.Point(177, 233)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(88, 23)
-        Me.Button3.TabIndex = 41
-        Me.Button3.Text = "Премахни час"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.labelCurrentSubjectNumber.Location = New System.Drawing.Point(299, 27)
+        Me.labelCurrentSubjectNumber.Name = "labelCurrentSubjectNumber"
+        Me.labelCurrentSubjectNumber.Size = New System.Drawing.Size(0, 0)
+        Me.labelCurrentSubjectNumber.TabIndex = 51
         '
-        'diary
+        'labelInfoNumber
+        '
+        Me.labelInfoNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelInfoNumber.Location = New System.Drawing.Point(5, 98)
+        Me.labelInfoNumber.MaximumSize = New System.Drawing.Size(200, 100)
+        Me.labelInfoNumber.Name = "labelInfoNumber"
+        Me.labelInfoNumber.Size = New System.Drawing.Size(60, 20)
+        Me.labelInfoNumber.TabIndex = 52
+        Me.labelInfoNumber.Text = "Номер:"
+        '
+        'labelStudentNumber
+        '
+        Me.labelStudentNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelStudentNumber.Location = New System.Drawing.Point(61, 98)
+        Me.labelStudentNumber.MaximumSize = New System.Drawing.Size(200, 100)
+        Me.labelStudentNumber.Name = "labelStudentNumber"
+        Me.labelStudentNumber.Size = New System.Drawing.Size(60, 20)
+        Me.labelStudentNumber.TabIndex = 53
+        Me.labelStudentNumber.Text = "Номер:"
+        '
+        'back
+        '
+        Me.back.Location = New System.Drawing.Point(79, 224)
+        Me.back.Name = "back"
+        Me.back.Size = New System.Drawing.Size(75, 23)
+        Me.back.TabIndex = 54
+        Me.back.Text = "Върни се"
+        Me.back.UseVisualStyleBackColor = True
+        '
+        'StudentGrades
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(541, 263)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.label12)
-        Me.Controls.Add(Me.label11)
-        Me.Controls.Add(Me.label10)
-        Me.Controls.Add(Me.richTextBox1)
-        Me.Controls.Add(Me.label9)
-        Me.Controls.Add(Me.label8)
-        Me.Controls.Add(Me.label7)
-        Me.Controls.Add(Me.label6)
-        Me.Controls.Add(Me.label5)
-        Me.Controls.Add(Me.label4)
-        Me.Controls.Add(Me.label3)
-        Me.Controls.Add(Me.label2)
-        Me.Controls.Add(Me.button5)
-        Me.Controls.Add(Me.button4)
-        Me.Controls.Add(Me.label1)
-        Me.Controls.Add(Me.listBox1)
-        Me.Controls.Add(Me.button2)
-        Me.Controls.Add(Me.button1)
-        Me.Name = "diary"
-        Me.Text = "diary"
+        Me.ClientSize = New System.Drawing.Size(549, 259)
+        Me.Controls.Add(Me.back)
+        Me.Controls.Add(Me.labelStudentNumber)
+        Me.Controls.Add(Me.labelInfoNumber)
+        Me.Controls.Add(Me.labelCurrentSubjectNumber)
+        Me.Controls.Add(Me.labelCurrentSubject)
+        Me.Controls.Add(Me.removeAbsence)
+        Me.Controls.Add(Me.removeGrade)
+        Me.Controls.Add(Me.addAbsence)
+        Me.Controls.Add(Me.addGrade)
+        Me.Controls.Add(Me.studentAbsenceList)
+        Me.Controls.Add(Me.studentGradesList)
+        Me.Controls.Add(Me.confirmChoice)
+        Me.Controls.Add(Me.subjectList)
+        Me.Controls.Add(Me.labelRemarks)
+        Me.Controls.Add(Me.remarksView)
+        Me.Controls.Add(Me.labelCurrentSemester)
+        Me.Controls.Add(Me.labelSemster)
+        Me.Controls.Add(Me.labelStudentAbsence)
+        Me.Controls.Add(Me.labelGrades)
+        Me.Controls.Add(Me.labelCurrentStudent)
+        Me.Controls.Add(Me.subjectAddEditRemove)
+        Me.Controls.Add(Me.save)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Name = "StudentGrades"
+        Me.Text = "Оценките, забележките и отсъствия"
+        CType(Me.ElectronicDiaryDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SubjectsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Private WithEvents label12 As System.Windows.Forms.Label
-    Private WithEvents label11 As System.Windows.Forms.Label
-    Private WithEvents label10 As System.Windows.Forms.Label
-    Private WithEvents richTextBox1 As System.Windows.Forms.RichTextBox
-    Private WithEvents label9 As System.Windows.Forms.Label
-    Private WithEvents label8 As System.Windows.Forms.Label
-    Private WithEvents label7 As System.Windows.Forms.Label
-    Private WithEvents label6 As System.Windows.Forms.Label
-    Private WithEvents label5 As System.Windows.Forms.Label
-    Private WithEvents label4 As System.Windows.Forms.Label
-    Public WithEvents label3 As System.Windows.Forms.Label
-    Public WithEvents label2 As System.Windows.Forms.Label
-    Private WithEvents button4 As System.Windows.Forms.Button
-    Public WithEvents label1 As System.Windows.Forms.Label
-    Public WithEvents listBox1 As System.Windows.Forms.ListBox
-    Private WithEvents button2 As System.Windows.Forms.Button
-    Private WithEvents button1 As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Private WithEvents Label13 As System.Windows.Forms.Label
-    Public WithEvents Label14 As System.Windows.Forms.Label
-    Private WithEvents button5 As System.Windows.Forms.Button
-    Private WithEvents Button3 As System.Windows.Forms.Button
+    Private WithEvents labelRemarks As System.Windows.Forms.Label
+    Private WithEvents remarksView As System.Windows.Forms.RichTextBox
+    Private WithEvents labelCurrentSemester As System.Windows.Forms.Label
+    Private WithEvents labelSemster As System.Windows.Forms.Label
+    Private WithEvents labelStudentAbsence As System.Windows.Forms.Label
+    Private WithEvents labelGrades As System.Windows.Forms.Label
+    Public WithEvents labelCurrentStudent As System.Windows.Forms.Label
+    Private WithEvents subjectAddEditRemove As System.Windows.Forms.Button
+    Private WithEvents save As System.Windows.Forms.Button
+    Friend WithEvents ElectronicDiaryDatabaseDataSet As diary.ElectronicDiaryDatabaseDataSet
+    Friend WithEvents SubjectsBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents SubjectsTableAdapter As diary.ElectronicDiaryDatabaseDataSetTableAdapters.SubjectsTableAdapter
+    Friend WithEvents TableAdapterManager As diary.ElectronicDiaryDatabaseDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents subjectList As System.Windows.Forms.ListView
+    Private WithEvents confirmChoice As System.Windows.Forms.Button
+    Friend WithEvents studentGradesList As System.Windows.Forms.ListView
+    Friend WithEvents studentAbsenceList As System.Windows.Forms.ListView
+    Private WithEvents addGrade As System.Windows.Forms.Button
+    Private WithEvents addAbsence As System.Windows.Forms.Button
+    Private WithEvents removeAbsence As System.Windows.Forms.Button
+    Private WithEvents removeGrade As System.Windows.Forms.Button
+    Private WithEvents labelCurrentSubjectNumber As System.Windows.Forms.Label
+    Public WithEvents labelInfoNumber As System.Windows.Forms.Label
+    Public WithEvents labelStudentNumber As System.Windows.Forms.Label
+    Private WithEvents back As System.Windows.Forms.Button
+    Public WithEvents labelCurrentSubject As System.Windows.Forms.Label
 End Class

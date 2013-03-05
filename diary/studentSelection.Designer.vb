@@ -22,280 +22,294 @@ Partial Class StudentSelection
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StudentSelection))
-        Me.button9 = New System.Windows.Forms.Button()
-        Me.label10 = New System.Windows.Forms.Label()
-        Me.label9 = New System.Windows.Forms.Label()
-        Me.label8 = New System.Windows.Forms.Label()
-        Me.button8 = New System.Windows.Forms.Button()
-        Me.label7 = New System.Windows.Forms.Label()
-        Me.button7 = New System.Windows.Forms.Button()
-        Me.button6 = New System.Windows.Forms.Button()
-        Me.label6 = New System.Windows.Forms.Label()
-        Me.label5 = New System.Windows.Forms.Label()
-        Me.label4 = New System.Windows.Forms.Label()
-        Me.button5 = New System.Windows.Forms.Button()
-        Me.button4 = New System.Windows.Forms.Button()
-        Me.button3 = New System.Windows.Forms.Button()
-        Me.label3 = New System.Windows.Forms.Label()
-        Me.label2 = New System.Windows.Forms.Label()
-        Me.label1 = New System.Windows.Forms.Label()
-        Me.listBox1 = New System.Windows.Forms.ListBox()
-        Me.button2 = New System.Windows.Forms.Button()
-        Me.button1 = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.labelMessage = New System.Windows.Forms.Label()
+        Me.labelWorkWithDiary = New System.Windows.Forms.Label()
+        Me.finished = New System.Windows.Forms.Button()
+        Me.messageToStudent = New System.Windows.Forms.Button()
+        Me.labelMessageToStudent = New System.Windows.Forms.Label()
+        Me.labelMessageToParents = New System.Windows.Forms.Label()
+        Me.labelMessageToClass = New System.Windows.Forms.Label()
+        Me.messageToParents = New System.Windows.Forms.Button()
+        Me.messageToClass = New System.Windows.Forms.Button()
+        Me.labelChooseStudent = New System.Windows.Forms.Label()
+        Me.labelInfoStudentData = New System.Windows.Forms.Label()
+        Me.confirmChoice = New System.Windows.Forms.Button()
+        Me.studentData = New System.Windows.Forms.Button()
+        Me.labelMessageToParent = New System.Windows.Forms.Label()
+        Me.messageToParent = New System.Windows.Forms.Button()
+        Me.studentList = New System.Windows.Forms.ListView()
+        Me.Invisible = New System.Windows.Forms.ListView()
+        Me.Student_DataBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ElectronicDiaryDatabaseDataSet = New diary.ElectronicDiaryDatabaseDataSet()
+        Me.Student_DataTableAdapter = New diary.ElectronicDiaryDatabaseDataSetTableAdapters.Student_DataTableAdapter()
+        Me.TableAdapterManager = New diary.ElectronicDiaryDatabaseDataSetTableAdapters.TableAdapterManager()
+        Me.InvisibleParents = New System.Windows.Forms.ListView()
+        Me.Logo = New System.Windows.Forms.PictureBox()
+        CType(Me.Student_DataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ElectronicDiaryDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'button9
+        'labelMessage
         '
-        Me.button9.Location = New System.Drawing.Point(12, 269)
-        Me.button9.Name = "button9"
-        Me.button9.Size = New System.Drawing.Size(102, 23)
-        Me.button9.TabIndex = 40
-        Me.button9.Text = "Разгледай"
-        Me.button9.UseVisualStyleBackColor = True
+        Me.labelMessage.AutoSize = True
+        Me.labelMessage.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelMessage.Location = New System.Drawing.Point(420, 9)
+        Me.labelMessage.Name = "labelMessage"
+        Me.labelMessage.Size = New System.Drawing.Size(168, 29)
+        Me.labelMessage.TabIndex = 38
+        Me.labelMessage.Text = "СЪОБЩЕНИЕ"
         '
-        'label10
+        'labelWorkWithDiary
         '
-        Me.label10.AutoSize = True
-        Me.label10.Location = New System.Drawing.Point(9, 240)
-        Me.label10.MaximumSize = New System.Drawing.Size(130, 0)
-        Me.label10.Name = "label10"
-        Me.label10.Size = New System.Drawing.Size(105, 26)
-        Me.label10.TabIndex = 39
-        Me.label10.Text = "Разгледай данните" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " на Ученика"
+        Me.labelWorkWithDiary.AutoSize = True
+        Me.labelWorkWithDiary.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelWorkWithDiary.Location = New System.Drawing.Point(261, 0)
+        Me.labelWorkWithDiary.MaximumSize = New System.Drawing.Size(100, 0)
+        Me.labelWorkWithDiary.Name = "labelWorkWithDiary"
+        Me.labelWorkWithDiary.Size = New System.Drawing.Size(98, 48)
+        Me.labelWorkWithDiary.TabIndex = 37
+        Me.labelWorkWithDiary.Text = "Работа с Дневника"
         '
-        'label9
+        'finished
         '
-        Me.label9.AutoSize = True
-        Me.label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label9.Location = New System.Drawing.Point(908, 24)
-        Me.label9.Name = "label9"
-        Me.label9.Size = New System.Drawing.Size(168, 29)
-        Me.label9.TabIndex = 38
-        Me.label9.Text = "СЪОБЩЕНИЕ"
+        Me.finished.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.finished.Location = New System.Drawing.Point(439, 375)
+        Me.finished.Name = "finished"
+        Me.finished.Size = New System.Drawing.Size(138, 50)
+        Me.finished.TabIndex = 34
+        Me.finished.Text = "Приключих"
+        Me.finished.UseVisualStyleBackColor = True
         '
-        'label8
+        'messageToStudent
         '
-        Me.label8.AutoSize = True
-        Me.label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label8.Location = New System.Drawing.Point(306, 8)
-        Me.label8.Name = "label8"
-        Me.label8.Size = New System.Drawing.Size(114, 29)
-        Me.label8.TabIndex = 37
-        Me.label8.Text = "УЧЕНИК"
+        Me.messageToStudent.Location = New System.Drawing.Point(439, 167)
+        Me.messageToStudent.Name = "messageToStudent"
+        Me.messageToStudent.Size = New System.Drawing.Size(150, 35)
+        Me.messageToStudent.TabIndex = 33
+        Me.messageToStudent.Text = "Съобщение до ученика"
+        Me.messageToStudent.UseVisualStyleBackColor = True
         '
-        'button8
+        'labelMessageToStudent
         '
-        Me.button8.Location = New System.Drawing.Point(157, 269)
-        Me.button8.Name = "button8"
-        Me.button8.Size = New System.Drawing.Size(100, 23)
-        Me.button8.TabIndex = 36
-        Me.button8.Text = "Промени"
-        Me.button8.UseVisualStyleBackColor = True
+        Me.labelMessageToStudent.AutoSize = True
+        Me.labelMessageToStudent.Location = New System.Drawing.Point(444, 125)
+        Me.labelMessageToStudent.MaximumSize = New System.Drawing.Size(156, 0)
+        Me.labelMessageToStudent.Name = "labelMessageToStudent"
+        Me.labelMessageToStudent.Size = New System.Drawing.Size(153, 39)
+        Me.labelMessageToStudent.TabIndex = 32
+        Me.labelMessageToStudent.Text = "Ако имате съобщение само за избраният ученик, изпратете:"
         '
-        'label7
+        'labelMessageToParents
         '
-        Me.label7.AutoSize = True
-        Me.label7.Location = New System.Drawing.Point(154, 240)
-        Me.label7.MaximumSize = New System.Drawing.Size(130, 0)
-        Me.label7.Name = "label7"
-        Me.label7.Size = New System.Drawing.Size(103, 26)
-        Me.label7.TabIndex = 35
-        Me.label7.Text = "Ако има грешка в данните на ученик:"
+        Me.labelMessageToParents.AutoSize = True
+        Me.labelMessageToParents.Location = New System.Drawing.Point(444, 214)
+        Me.labelMessageToParents.MaximumSize = New System.Drawing.Size(150, 0)
+        Me.labelMessageToParents.Name = "labelMessageToParents"
+        Me.labelMessageToParents.Size = New System.Drawing.Size(139, 26)
+        Me.labelMessageToParents.TabIndex = 31
+        Me.labelMessageToParents.Text = "Ако имате съобщение за родителите, изпратете:"
         '
-        'button7
+        'labelMessageToClass
         '
-        Me.button7.Location = New System.Drawing.Point(1101, 591)
-        Me.button7.Name = "button7"
-        Me.button7.Size = New System.Drawing.Size(75, 50)
-        Me.button7.TabIndex = 34
-        Me.button7.Text = "Приключих"
-        Me.button7.UseVisualStyleBackColor = True
+        Me.labelMessageToClass.AutoSize = True
+        Me.labelMessageToClass.Location = New System.Drawing.Point(436, 48)
+        Me.labelMessageToClass.MaximumSize = New System.Drawing.Size(150, 0)
+        Me.labelMessageToClass.Name = "labelMessageToClass"
+        Me.labelMessageToClass.Size = New System.Drawing.Size(139, 26)
+        Me.labelMessageToClass.TabIndex = 30
+        Me.labelMessageToClass.Text = "Ако имате съобщение до класа, изпратете:"
         '
-        'button6
+        'messageToParents
         '
-        Me.button6.Location = New System.Drawing.Point(772, 206)
-        Me.button6.Name = "button6"
-        Me.button6.Size = New System.Drawing.Size(150, 23)
-        Me.button6.TabIndex = 33
-        Me.button6.Text = "Съобщение до ученика"
-        Me.button6.UseVisualStyleBackColor = True
+        Me.messageToParents.Location = New System.Drawing.Point(439, 243)
+        Me.messageToParents.Name = "messageToParents"
+        Me.messageToParents.Size = New System.Drawing.Size(150, 35)
+        Me.messageToParents.TabIndex = 29
+        Me.messageToParents.Text = "Съобщение до родителите"
+        Me.messageToParents.UseVisualStyleBackColor = True
         '
-        'label6
+        'messageToClass
         '
-        Me.label6.AutoSize = True
-        Me.label6.Location = New System.Drawing.Point(769, 164)
-        Me.label6.MaximumSize = New System.Drawing.Size(156, 0)
-        Me.label6.Name = "label6"
-        Me.label6.Size = New System.Drawing.Size(153, 39)
-        Me.label6.TabIndex = 32
-        Me.label6.Text = "Ако имате съобщение само за избраният ученик, изпратете:"
+        Me.messageToClass.Location = New System.Drawing.Point(439, 77)
+        Me.messageToClass.Name = "messageToClass"
+        Me.messageToClass.Size = New System.Drawing.Size(150, 35)
+        Me.messageToClass.TabIndex = 28
+        Me.messageToClass.Text = "Съобщение до класа"
+        Me.messageToClass.UseVisualStyleBackColor = True
         '
-        'label5
+        'labelChooseStudent
         '
-        Me.label5.AutoSize = True
-        Me.label5.Location = New System.Drawing.Point(769, 244)
-        Me.label5.MaximumSize = New System.Drawing.Size(150, 0)
-        Me.label5.Name = "label5"
-        Me.label5.Size = New System.Drawing.Size(139, 26)
-        Me.label5.TabIndex = 31
-        Me.label5.Text = "Ако имате съобщение за родителите, изпратете:"
+        Me.labelChooseStudent.AutoSize = True
+        Me.labelChooseStudent.Location = New System.Drawing.Point(65, 6)
+        Me.labelChooseStudent.Name = "labelChooseStudent"
+        Me.labelChooseStudent.Size = New System.Drawing.Size(93, 13)
+        Me.labelChooseStudent.TabIndex = 25
+        Me.labelChooseStudent.Text = "Изберете ученик"
         '
-        'label4
+        'labelInfoStudentData
         '
-        Me.label4.AutoSize = True
-        Me.label4.Location = New System.Drawing.Point(769, 82)
-        Me.label4.MaximumSize = New System.Drawing.Size(150, 0)
-        Me.label4.Name = "label4"
-        Me.label4.Size = New System.Drawing.Size(139, 26)
-        Me.label4.TabIndex = 30
-        Me.label4.Text = "Ако имате съобщение до класа, изпратете:"
+        Me.labelInfoStudentData.AutoSize = True
+        Me.labelInfoStudentData.Location = New System.Drawing.Point(251, 48)
+        Me.labelInfoStudentData.MaximumSize = New System.Drawing.Size(120, 0)
+        Me.labelInfoStudentData.Name = "labelInfoStudentData"
+        Me.labelInfoStudentData.Size = New System.Drawing.Size(120, 52)
+        Me.labelInfoStudentData.TabIndex = 24
+        Me.labelInfoStudentData.Text = "За да добавите, премахнете, промените данните на ученик, работете с:"
         '
-        'button5
+        'confirmChoice
         '
-        Me.button5.Location = New System.Drawing.Point(772, 282)
-        Me.button5.Name = "button5"
-        Me.button5.Size = New System.Drawing.Size(150, 23)
-        Me.button5.TabIndex = 29
-        Me.button5.Text = "Съобщение до родителите"
-        Me.button5.UseVisualStyleBackColor = True
+        Me.confirmChoice.Location = New System.Drawing.Point(12, 125)
+        Me.confirmChoice.Name = "confirmChoice"
+        Me.confirmChoice.Size = New System.Drawing.Size(209, 36)
+        Me.confirmChoice.TabIndex = 22
+        Me.confirmChoice.Text = "Потвърди избора"
+        Me.confirmChoice.UseVisualStyleBackColor = True
         '
-        'button4
+        'studentData
         '
-        Me.button4.Location = New System.Drawing.Point(772, 111)
-        Me.button4.Name = "button4"
-        Me.button4.Size = New System.Drawing.Size(150, 23)
-        Me.button4.TabIndex = 28
-        Me.button4.Text = "Съобщение до класа"
-        Me.button4.UseVisualStyleBackColor = True
+        Me.studentData.Location = New System.Drawing.Point(254, 106)
+        Me.studentData.Name = "studentData"
+        Me.studentData.Size = New System.Drawing.Size(105, 42)
+        Me.studentData.TabIndex = 21
+        Me.studentData.Text = "Данните за учениците"
+        Me.studentData.UseVisualStyleBackColor = True
         '
-        'button3
+        'labelMessageToParent
         '
-        Me.button3.Location = New System.Drawing.Point(66, 418)
-        Me.button3.Name = "button3"
-        Me.button3.Size = New System.Drawing.Size(105, 45)
-        Me.button3.TabIndex = 27
-        Me.button3.Text = "Премахни ученик"
-        Me.button3.UseVisualStyleBackColor = True
+        Me.labelMessageToParent.AutoSize = True
+        Me.labelMessageToParent.Location = New System.Drawing.Point(444, 290)
+        Me.labelMessageToParent.MaximumSize = New System.Drawing.Size(150, 0)
+        Me.labelMessageToParent.Name = "labelMessageToParent"
+        Me.labelMessageToParent.Size = New System.Drawing.Size(139, 39)
+        Me.labelMessageToParent.TabIndex = 43
+        Me.labelMessageToParent.Text = "Ако имате съобщение за родителя на ученика, изпратете:"
         '
-        'label3
+        'messageToParent
         '
-        Me.label3.AutoSize = True
-        Me.label3.Location = New System.Drawing.Point(63, 363)
-        Me.label3.MaximumSize = New System.Drawing.Size(120, 0)
-        Me.label3.Name = "label3"
-        Me.label3.Size = New System.Drawing.Size(120, 52)
-        Me.label3.TabIndex = 26
-        Me.label3.Text = "Ако ученикът не трябва да фигурира в списъка, изберете го и го премахнете:"
+        Me.messageToParent.Location = New System.Drawing.Point(438, 332)
+        Me.messageToParent.Name = "messageToParent"
+        Me.messageToParent.Size = New System.Drawing.Size(150, 35)
+        Me.messageToParent.TabIndex = 42
+        Me.messageToParent.Text = "Съобщение до родителя"
+        Me.messageToParent.UseVisualStyleBackColor = True
         '
-        'label2
+        'studentList
         '
-        Me.label2.AutoSize = True
-        Me.label2.Location = New System.Drawing.Point(24, 8)
-        Me.label2.Name = "label2"
-        Me.label2.Size = New System.Drawing.Size(93, 13)
-        Me.label2.TabIndex = 25
-        Me.label2.Text = "Изберете ученик"
+        Me.studentList.Location = New System.Drawing.Point(12, 22)
+        Me.studentList.Name = "studentList"
+        Me.studentList.Size = New System.Drawing.Size(209, 97)
+        Me.studentList.TabIndex = 44
+        Me.studentList.UseCompatibleStateImageBehavior = False
         '
-        'label1
+        'Invisible
         '
-        Me.label1.AutoSize = True
-        Me.label1.Location = New System.Drawing.Point(173, 66)
-        Me.label1.MaximumSize = New System.Drawing.Size(120, 0)
-        Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(116, 39)
-        Me.label1.TabIndex = 24
-        Me.label1.Text = "Ако ученикът не фигурира в списъка, моля добавете го :"
+        Me.Invisible.Location = New System.Drawing.Point(378, 402)
+        Me.Invisible.Name = "Invisible"
+        Me.Invisible.Size = New System.Drawing.Size(10, 10)
+        Me.Invisible.TabIndex = 45
+        Me.Invisible.UseCompatibleStateImageBehavior = False
         '
-        'listBox1
+        'Student_DataBindingSource
         '
-        Me.listBox1.FormattingEnabled = True
-        Me.listBox1.Location = New System.Drawing.Point(12, 24)
-        Me.listBox1.Name = "listBox1"
-        Me.listBox1.Size = New System.Drawing.Size(120, 95)
-        Me.listBox1.TabIndex = 23
+        Me.Student_DataBindingSource.DataMember = "Student Data"
+        Me.Student_DataBindingSource.DataSource = Me.ElectronicDiaryDatabaseDataSet
         '
-        'button2
+        'ElectronicDiaryDatabaseDataSet
         '
-        Me.button2.Location = New System.Drawing.Point(12, 125)
-        Me.button2.Name = "button2"
-        Me.button2.Size = New System.Drawing.Size(120, 23)
-        Me.button2.TabIndex = 22
-        Me.button2.Text = "Потвърди избора"
-        Me.button2.UseVisualStyleBackColor = True
+        Me.ElectronicDiaryDatabaseDataSet.DataSetName = "ElectronicDiaryDatabaseDataSet"
+        Me.ElectronicDiaryDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'button1
+        'Student_DataTableAdapter
         '
-        Me.button1.Location = New System.Drawing.Point(173, 111)
-        Me.button1.Name = "button1"
-        Me.button1.Size = New System.Drawing.Size(105, 42)
-        Me.button1.TabIndex = 21
-        Me.button1.Text = "Добави ученик"
-        Me.button1.UseVisualStyleBackColor = True
+        Me.Student_DataTableAdapter.ClearBeforeFill = True
         '
-        'PictureBox1
+        'TableAdapterManager
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(263, 180)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(491, 452)
-        Me.PictureBox1.TabIndex = 41
-        Me.PictureBox1.TabStop = False
+        Me.TableAdapterManager.AccountsTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Message_Log_To_ParentsTableAdapter = Nothing
+        Me.TableAdapterManager.Message_Log_To_StudentsTableAdapter = Nothing
+        Me.TableAdapterManager.Student_DataTableAdapter = Me.Student_DataTableAdapter
+        Me.TableAdapterManager.SubjectsTableAdapter = Nothing
+        Me.TableAdapterManager.Summary_LogTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = diary.ElectronicDiaryDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'selector
+        'InvisibleParents
+        '
+        Me.InvisibleParents.Location = New System.Drawing.Point(378, 402)
+        Me.InvisibleParents.Name = "InvisibleParents"
+        Me.InvisibleParents.Size = New System.Drawing.Size(10, 10)
+        Me.InvisibleParents.TabIndex = 46
+        Me.InvisibleParents.UseCompatibleStateImageBehavior = False
+        '
+        'Logo
+        '
+        Me.Logo.Image = CType(resources.GetObject("Logo.Image"), System.Drawing.Image)
+        Me.Logo.Location = New System.Drawing.Point(12, 167)
+        Me.Logo.Name = "Logo"
+        Me.Logo.Size = New System.Drawing.Size(386, 258)
+        Me.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Logo.TabIndex = 47
+        Me.Logo.TabStop = False
+        '
+        'StudentSelection
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1179, 644)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.button9)
-        Me.Controls.Add(Me.label10)
-        Me.Controls.Add(Me.label9)
-        Me.Controls.Add(Me.label8)
-        Me.Controls.Add(Me.button8)
-        Me.Controls.Add(Me.label7)
-        Me.Controls.Add(Me.button7)
-        Me.Controls.Add(Me.button6)
-        Me.Controls.Add(Me.label6)
-        Me.Controls.Add(Me.label5)
-        Me.Controls.Add(Me.label4)
-        Me.Controls.Add(Me.button5)
-        Me.Controls.Add(Me.button4)
-        Me.Controls.Add(Me.button3)
-        Me.Controls.Add(Me.label3)
-        Me.Controls.Add(Me.label2)
-        Me.Controls.Add(Me.label1)
-        Me.Controls.Add(Me.listBox1)
-        Me.Controls.Add(Me.button2)
-        Me.Controls.Add(Me.button1)
-        Me.Name = "selector"
-        Me.Text = "selector"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ClientSize = New System.Drawing.Size(609, 432)
+        Me.Controls.Add(Me.Logo)
+        Me.Controls.Add(Me.InvisibleParents)
+        Me.Controls.Add(Me.Invisible)
+        Me.Controls.Add(Me.studentList)
+        Me.Controls.Add(Me.labelMessageToParent)
+        Me.Controls.Add(Me.messageToParent)
+        Me.Controls.Add(Me.labelMessage)
+        Me.Controls.Add(Me.labelWorkWithDiary)
+        Me.Controls.Add(Me.finished)
+        Me.Controls.Add(Me.messageToStudent)
+        Me.Controls.Add(Me.labelMessageToStudent)
+        Me.Controls.Add(Me.labelMessageToParents)
+        Me.Controls.Add(Me.labelMessageToClass)
+        Me.Controls.Add(Me.messageToParents)
+        Me.Controls.Add(Me.messageToClass)
+        Me.Controls.Add(Me.labelChooseStudent)
+        Me.Controls.Add(Me.labelInfoStudentData)
+        Me.Controls.Add(Me.confirmChoice)
+        Me.Controls.Add(Me.studentData)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Name = "StudentSelection"
+        Me.Text = "Главно меню"
+        CType(Me.Student_DataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ElectronicDiaryDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Private WithEvents button9 As System.Windows.Forms.Button
-    Private WithEvents label10 As System.Windows.Forms.Label
-    Private WithEvents label9 As System.Windows.Forms.Label
-    Private WithEvents label8 As System.Windows.Forms.Label
-    Private WithEvents button8 As System.Windows.Forms.Button
-    Private WithEvents label7 As System.Windows.Forms.Label
-    Private WithEvents button7 As System.Windows.Forms.Button
-    Private WithEvents button6 As System.Windows.Forms.Button
-    Private WithEvents label6 As System.Windows.Forms.Label
-    Private WithEvents label5 As System.Windows.Forms.Label
-    Private WithEvents label4 As System.Windows.Forms.Label
-    Private WithEvents button5 As System.Windows.Forms.Button
-    Private WithEvents button4 As System.Windows.Forms.Button
-    Private WithEvents button3 As System.Windows.Forms.Button
-    Private WithEvents label3 As System.Windows.Forms.Label
-    Private WithEvents label2 As System.Windows.Forms.Label
-    Private WithEvents label1 As System.Windows.Forms.Label
-    Public WithEvents listBox1 As System.Windows.Forms.ListBox
-    Private WithEvents button2 As System.Windows.Forms.Button
-    Private WithEvents button1 As System.Windows.Forms.Button
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Private WithEvents labelMessage As System.Windows.Forms.Label
+    Private WithEvents labelWorkWithDiary As System.Windows.Forms.Label
+    Private WithEvents finished As System.Windows.Forms.Button
+    Private WithEvents messageToStudent As System.Windows.Forms.Button
+    Private WithEvents labelMessageToStudent As System.Windows.Forms.Label
+    Private WithEvents labelMessageToParents As System.Windows.Forms.Label
+    Private WithEvents labelMessageToClass As System.Windows.Forms.Label
+    Private WithEvents messageToParents As System.Windows.Forms.Button
+    Private WithEvents messageToClass As System.Windows.Forms.Button
+    Private WithEvents labelChooseStudent As System.Windows.Forms.Label
+    Private WithEvents labelInfoStudentData As System.Windows.Forms.Label
+    Private WithEvents confirmChoice As System.Windows.Forms.Button
+    Private WithEvents studentData As System.Windows.Forms.Button
+    Private WithEvents labelMessageToParent As System.Windows.Forms.Label
+    Private WithEvents messageToParent As System.Windows.Forms.Button
+    Friend WithEvents ElectronicDiaryDatabaseDataSet As diary.ElectronicDiaryDatabaseDataSet
+    Friend WithEvents Student_DataBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Student_DataTableAdapter As diary.ElectronicDiaryDatabaseDataSetTableAdapters.Student_DataTableAdapter
+    Friend WithEvents TableAdapterManager As diary.ElectronicDiaryDatabaseDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents studentList As System.Windows.Forms.ListView
+    Friend WithEvents Invisible As System.Windows.Forms.ListView
+    Friend WithEvents InvisibleParents As System.Windows.Forms.ListView
+    Friend WithEvents Logo As System.Windows.Forms.PictureBox
 End Class

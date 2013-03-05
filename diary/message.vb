@@ -1,16 +1,31 @@
-﻿Public Class message
+﻿Imports System.Net.Mail
+Public Class message
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Me.Hide()
-        StudentSelection.Show()
+    Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
+        functions.ShowFormHideCurrent(Me, StudentSelection)
     End Sub
-    Private Sub button1_Click(sender As Object, e As EventArgs) Handles button1.Click
-        Dim message As String
-        Dim toWho As String
-        toWho = StudentSelection.toWho
-        message = richTextBox1.Text
-        summary.listView1.Items.Add("До " & toWho & ":" & vbCrLf & message)
-        Me.Hide()
-        StudentSelection.Show()
+    Private Sub send_Click(sender As Object, e As EventArgs) Handles send.Click
+        functions.SendMail(messageInfo, YourMail.Text, labelToWho.Text, Subject, YourPassword.Text)
+
+        'Изпраща информацията въведена към крайният отчет
+        functions.AddToSummary("До " & labelToWho.Text & ":" & vbCrLf & "text", summary.summaryView)
+        functions.ShowFormHideCurrent(Me, StudentSelection)
+
+    End Sub
+
+    Private Sub message_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Application.Exit()
+    End Sub
+
+    Private Sub message_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim splits As String
+        splits = labelToWho.Text
+        Dim emails() As String = splits.Split(" ")
+        labelToWho.Text = ""
+        For Each item As String In emails
+            labelToWho.Text += item + ","
+        Next
+
+
     End Sub
 End Class

@@ -30,7 +30,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x64</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -60,6 +60,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>small-book.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -98,16 +101,33 @@
     <Compile Include="addSubject.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="constants.vb" />
+    <Compile Include="ElectronicDiaryDatabaseDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectronicDiaryDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectronicDiaryDatabaseDataSet.vb">
+      <DependentUpon>ElectronicDiaryDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectronicDiaryDatabaseDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectronicDiaryDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="functions.vb" />
+    <Compile Include="Recordset.vb" />
+    <Compile Include="RegisterUser.Designer.vb">
+      <DependentUpon>RegisterUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="studentGrades.Designer.vb">
       <DependentUpon>studentGrades.vb</DependentUpon>
     </Compile>
     <Compile Include="studentGrades.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ElectronicDiaryDatabaseDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ElectronicDiaryDatabaseDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="login.Designer.vb">
       <DependentUpon>login.vb</DependentUpon>
@@ -148,12 +168,6 @@
     <Compile Include="summary.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="tester.Designer.vb">
-      <DependentUpon>tester.vb</DependentUpon>
-    </Compile>
-    <Compile Include="tester.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="addStudent.resx">
@@ -161,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="addSubject.resx">
       <DependentUpon>addSubject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterUser.resx">
+      <DependentUpon>RegisterUser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="studentGrades.resx">
       <DependentUpon>studentGrades.vb</DependentUpon>
@@ -183,19 +200,17 @@
     <EmbeddedResource Include="summary.resx">
       <DependentUpon>summary.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="tester.resx">
-      <DependentUpon>tester.vb</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
     <None Include="ElectronicDiaryDatabaseDataSet.xsc">
       <DependentUpon>ElectronicDiaryDatabaseDataSet.xsd</DependentUpon>
     </None>
     <None Include="ElectronicDiaryDatabaseDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ElectronicDiaryDatabaseDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>ElectronicDiaryDatabaseDataSet1.Designer.vb</LastGenOutput>
     </None>
     <None Include="ElectronicDiaryDatabaseDataSet.xss">
       <DependentUpon>ElectronicDiaryDatabaseDataSet.xsd</DependentUpon>
@@ -212,11 +227,6 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ElectronicDiaryDatabase.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
@@ -239,6 +249,15 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="small-book.ico" />
+    <Content Include="studentRemark.txt" />
+    <Content Include="studentAbsence.txt" />
+    <Content Include="ElectronicDiaryDatabase.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="studentGrades.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

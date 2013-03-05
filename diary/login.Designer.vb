@@ -22,73 +22,126 @@ Partial Class login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(login))
+        Me.buttonLogin = New System.Windows.Forms.Button()
+        Me.labelPassword = New System.Windows.Forms.Label()
+        Me.labelUsername = New System.Windows.Forms.Label()
+        Me.username = New System.Windows.Forms.TextBox()
+        Me.password = New System.Windows.Forms.TextBox()
+        Me.registration = New System.Windows.Forms.Button()
+        Me.ElectronicDiaryDatabaseDataSet = New diary.ElectronicDiaryDatabaseDataSet()
+        Me.AccountsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AccountsTableAdapter = New diary.ElectronicDiaryDatabaseDataSetTableAdapters.AccountsTableAdapter()
+        Me.TableAdapterManager = New diary.ElectronicDiaryDatabaseDataSetTableAdapters.TableAdapterManager()
+        CType(Me.ElectronicDiaryDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AccountsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button1
+        'buttonLogin
         '
-        Me.Button1.Location = New System.Drawing.Point(54, 62)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Влез"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.buttonLogin.Location = New System.Drawing.Point(6, 62)
+        Me.buttonLogin.Name = "buttonLogin"
+        Me.buttonLogin.Size = New System.Drawing.Size(75, 23)
+        Me.buttonLogin.TabIndex = 0
+        Me.buttonLogin.Text = "Влез"
+        Me.buttonLogin.UseVisualStyleBackColor = True
         '
-        'Label1
+        'labelPassword
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(14, 39)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(45, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Парола"
+        Me.labelPassword.AutoSize = True
+        Me.labelPassword.Location = New System.Drawing.Point(14, 39)
+        Me.labelPassword.Name = "labelPassword"
+        Me.labelPassword.Size = New System.Drawing.Size(45, 13)
+        Me.labelPassword.TabIndex = 1
+        Me.labelPassword.Text = "Парола"
         '
-        'Label2
+        'labelUsername
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(14, 13)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(67, 13)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Потребител"
+        Me.labelUsername.AutoSize = True
+        Me.labelUsername.Location = New System.Drawing.Point(14, 13)
+        Me.labelUsername.Name = "labelUsername"
+        Me.labelUsername.Size = New System.Drawing.Size(67, 13)
+        Me.labelUsername.TabIndex = 2
+        Me.labelUsername.Text = "Потребител"
         '
-        'TextBox1
+        'username
         '
-        Me.TextBox1.Location = New System.Drawing.Point(82, 36)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 3
+        Me.username.Location = New System.Drawing.Point(87, 10)
+        Me.username.Name = "username"
+        Me.username.Size = New System.Drawing.Size(100, 20)
+        Me.username.TabIndex = 3
         '
-        'TextBox2
+        'password
         '
-        Me.TextBox2.Location = New System.Drawing.Point(82, 10)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 4
+        Me.password.Location = New System.Drawing.Point(87, 36)
+        Me.password.Name = "password"
+        Me.password.Size = New System.Drawing.Size(100, 20)
+        Me.password.TabIndex = 4
+        Me.password.UseSystemPasswordChar = True
+        '
+        'registration
+        '
+        Me.registration.Location = New System.Drawing.Point(99, 62)
+        Me.registration.Name = "registration"
+        Me.registration.Size = New System.Drawing.Size(83, 23)
+        Me.registration.TabIndex = 5
+        Me.registration.Text = "Регистрация"
+        Me.registration.UseVisualStyleBackColor = True
+        '
+        'ElectronicDiaryDatabaseDataSet
+        '
+        Me.ElectronicDiaryDatabaseDataSet.DataSetName = "ElectronicDiaryDatabaseDataSet"
+        Me.ElectronicDiaryDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'AccountsBindingSource
+        '
+        Me.AccountsBindingSource.DataMember = "Accounts"
+        Me.AccountsBindingSource.DataSource = Me.ElectronicDiaryDatabaseDataSet
+        '
+        'AccountsTableAdapter
+        '
+        Me.AccountsTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.AccountsTableAdapter = Me.AccountsTableAdapter
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Message_Log_To_ParentsTableAdapter = Nothing
+        Me.TableAdapterManager.Message_Log_To_StudentsTableAdapter = Nothing
+        Me.TableAdapterManager.Student_DataTableAdapter = Nothing
+        Me.TableAdapterManager.SubjectsTableAdapter = Nothing
+        Me.TableAdapterManager.Summary_LogTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = diary.ElectronicDiaryDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(189, 87)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(199, 96)
+        Me.Controls.Add(Me.registration)
+        Me.Controls.Add(Me.password)
+        Me.Controls.Add(Me.username)
+        Me.Controls.Add(Me.labelUsername)
+        Me.Controls.Add(Me.labelPassword)
+        Me.Controls.Add(Me.buttonLogin)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "login"
-        Me.Text = "login"
+        Me.Text = "Система"
+        CType(Me.ElectronicDiaryDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AccountsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents buttonLogin As System.Windows.Forms.Button
+    Friend WithEvents labelPassword As System.Windows.Forms.Label
+    Friend WithEvents labelUsername As System.Windows.Forms.Label
+    Friend WithEvents username As System.Windows.Forms.TextBox
+    Friend WithEvents password As System.Windows.Forms.TextBox
+    Friend WithEvents registration As System.Windows.Forms.Button
+    Friend WithEvents ElectronicDiaryDatabaseDataSet As diary.ElectronicDiaryDatabaseDataSet
+    Friend WithEvents AccountsBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents AccountsTableAdapter As diary.ElectronicDiaryDatabaseDataSetTableAdapters.AccountsTableAdapter
+    Friend WithEvents TableAdapterManager As diary.ElectronicDiaryDatabaseDataSetTableAdapters.TableAdapterManager
 End Class

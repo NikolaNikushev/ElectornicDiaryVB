@@ -22,67 +22,70 @@ Partial Class summary
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.listView1 = New System.Windows.Forms.ListView()
-        Me.button2 = New System.Windows.Forms.Button()
-        Me.button1 = New System.Windows.Forms.Button()
-        Me.label1 = New System.Windows.Forms.Label()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(summary))
+        Me.summaryView = New System.Windows.Forms.ListView()
+        Me.forward = New System.Windows.Forms.Button()
+        Me.back = New System.Windows.Forms.Button()
+        Me.labelSummary = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'listView1
+        'summaryView
         '
-        Me.listView1.Alignment = System.Windows.Forms.ListViewAlignment.Left
-        Me.listView1.Location = New System.Drawing.Point(4, 25)
-        Me.listView1.Name = "listView1"
-        Me.listView1.Size = New System.Drawing.Size(269, 205)
-        Me.listView1.TabIndex = 7
-        Me.listView1.TileSize = New System.Drawing.Size(250, 30)
-        Me.listView1.UseCompatibleStateImageBehavior = False
-        Me.listView1.View = System.Windows.Forms.View.Tile
+        Me.summaryView.Alignment = System.Windows.Forms.ListViewAlignment.Left
+        Me.summaryView.Location = New System.Drawing.Point(4, 29)
+        Me.summaryView.Name = "summaryView"
+        Me.summaryView.Size = New System.Drawing.Size(269, 201)
+        Me.summaryView.TabIndex = 7
+        Me.summaryView.TileSize = New System.Drawing.Size(250, 30)
+        Me.summaryView.UseCompatibleStateImageBehavior = False
+        Me.summaryView.View = System.Windows.Forms.View.Tile
         '
-        'button2
+        'forward
         '
-        Me.button2.Location = New System.Drawing.Point(198, 236)
-        Me.button2.Name = "button2"
-        Me.button2.Size = New System.Drawing.Size(75, 23)
-        Me.button2.TabIndex = 6
-        Me.button2.Text = "Продължи"
-        Me.button2.UseVisualStyleBackColor = True
+        Me.forward.Location = New System.Drawing.Point(197, 236)
+        Me.forward.Name = "forward"
+        Me.forward.Size = New System.Drawing.Size(75, 23)
+        Me.forward.TabIndex = 6
+        Me.forward.Text = "Продължи"
+        Me.forward.UseVisualStyleBackColor = True
         '
-        'button1
+        'back
         '
-        Me.button1.Location = New System.Drawing.Point(13, 236)
-        Me.button1.Name = "button1"
-        Me.button1.Size = New System.Drawing.Size(75, 23)
-        Me.button1.TabIndex = 5
-        Me.button1.Text = "Върни се"
-        Me.button1.UseVisualStyleBackColor = True
+        Me.back.Location = New System.Drawing.Point(12, 236)
+        Me.back.Name = "back"
+        Me.back.Size = New System.Drawing.Size(75, 23)
+        Me.back.TabIndex = 5
+        Me.back.Text = "Върни се"
+        Me.back.UseVisualStyleBackColor = True
         '
-        'label1
+        'labelSummary
         '
-        Me.label1.AutoSize = True
-        Me.label1.Location = New System.Drawing.Point(1, 9)
-        Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(187, 13)
-        Me.label1.TabIndex = 4
-        Me.label1.Text = "Вие направихте следните промени:"
+        Me.labelSummary.AutoSize = True
+        Me.labelSummary.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.labelSummary.Location = New System.Drawing.Point(1, 9)
+        Me.labelSummary.Name = "labelSummary"
+        Me.labelSummary.Size = New System.Drawing.Size(244, 17)
+        Me.labelSummary.TabIndex = 4
+        Me.labelSummary.Text = "Вие направихте следните промени:"
         '
         'summary
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 262)
-        Me.Controls.Add(Me.listView1)
-        Me.Controls.Add(Me.button2)
-        Me.Controls.Add(Me.button1)
-        Me.Controls.Add(Me.label1)
+        Me.ClientSize = New System.Drawing.Size(284, 268)
+        Me.Controls.Add(Me.summaryView)
+        Me.Controls.Add(Me.forward)
+        Me.Controls.Add(Me.back)
+        Me.Controls.Add(Me.labelSummary)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "summary"
-        Me.Text = "summary"
+        Me.Text = "Направени промени"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Public WithEvents listView1 As System.Windows.Forms.ListView
-    Private WithEvents button2 As System.Windows.Forms.Button
-    Private WithEvents button1 As System.Windows.Forms.Button
-    Private WithEvents label1 As System.Windows.Forms.Label
+    Public WithEvents summaryView As System.Windows.Forms.ListView
+    Private WithEvents forward As System.Windows.Forms.Button
+    Private WithEvents back As System.Windows.Forms.Button
+    Private WithEvents labelSummary As System.Windows.Forms.Label
 End Class

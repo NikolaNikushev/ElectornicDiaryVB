@@ -1,23 +1,37 @@
 ﻿Public Class login
-    ' Dim usernames(10), passwords(10) As String
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'Dim enteredPassword, enteredUserName As String
-        'enteredPassword = TextBox2.Text
-        ' enteredUserName = TextBox1.Text
-        'For i = 0 To 10 Step 1
-        'If enteredPassword = passwords(i) Then
-        'If enteredUserName = usernames(i) Then
-        ' 'PASS
-        Me.Hide()
-        StudentSelection.Show()
-        MessageBox.Show("Добре дошли, господине(госпожо(госпожице)) „име""")
-        ' Load files
-        ' Else
-        ' 'ERROR in Password
-        ' End If
-        ' Else
-        ' 'ERROR in username
-        ' End If
-        ' Next
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles buttonLogin.Click
+        Dim passwordInput, userNameInput As String
+        userNameInput = username.Text
+        passwordInput = password.Text
+        If Me.AccountsTableAdapter.LoginSystem(userNameInput, passwordInput) Then 'Изпраща подадената информация до базата данни за проверка на потребителя чрез селективна заявка
+
+            MsgBox("Добре дошли, " + userNameInput)
+            functions.ShowFormHideCurrent(Me, StudentSelection)
+        Else
+            MsgBox("Невалиден потребител или парола!")
+        End If
+
+    End Sub
+
+    Private Sub login_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Application.Exit()
+    End Sub
+
+ 
+
+    Private Sub login_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Me.buttonLogin.PerformClick()
+        End If
+    End Sub
+
+    Private Sub login_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'ElectronicDiaryDatabaseDataSet.Accounts' table. 
+        Me.AccountsTableAdapter.Fill(Me.ElectronicDiaryDatabaseDataSet.Accounts)
+
+    End Sub
+
+    Private Sub Registration_Click(sender As Object, e As EventArgs) Handles registration.Click
+        functions.ShowFormHideCurrent(Me, RegisterUser)
     End Sub
 End Class
