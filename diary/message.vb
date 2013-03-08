@@ -5,11 +5,11 @@ Public Class message
         functions.ShowFormHideCurrent(Me, StudentSelection)
     End Sub
     Private Sub send_Click(sender As Object, e As EventArgs) Handles send.Click
-        functions.SendMail(messageInfo, YourMail.Text, labelToWho.Text, Subject, YourPassword.Text)
+        functions.SendMail(messageInfo.Text, YourMail.Text, labelToWho.Text, Subject.Text, YourPassword.Text)
 
         'Изпраща информацията въведена към крайният отчет
         functions.AddToSummary("До " & labelToWho.Text & ":" & vbCrLf & "text", summary.summaryView)
-        functions.ShowFormHideCurrent(Me, StudentSelection)
+
 
     End Sub
 

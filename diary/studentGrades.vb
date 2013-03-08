@@ -49,7 +49,7 @@
                 subjectList.Items.AddRange(New ListViewItem() {lvItem})
             End With
         Next
-        subjectList.Sorting = SortOrder.Ascending
+        subjectList.Sort()
     End Sub
     'Бутоните, с който вие потвърждавате своя избор.
     Private Sub confirmChoice_Click(sender As Object, e As EventArgs) Handles confirmChoice.Click

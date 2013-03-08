@@ -10,12 +10,22 @@
         functions.ShowFormHideCurrent(Me, StudentGrades) 'Добавя промяната към крайният отчет.
         StudentGrades.SubjectsTableAdapter.Fill(StudentGrades.ElectronicDiaryDatabaseDataSet.Subjects)
         StudentGrades.subjectList.Clear()
+        With StudentGrades.subjectList
+            .Columns.Add("Предмет", 90, HorizontalAlignment.Left)
+            .Columns.Add("Преподавател", 90, HorizontalAlignment.Left)
+            .FullRowSelect = True
+            .GridLines = True
+            .MultiSelect = False
+            .View = View.Tile
+        End With
+
+        ' Преминава през редовете и ги добавя в списъка
         For Each dr As ElectronicDiaryDatabaseDataSet.SubjectsRow In ElectronicDiaryDatabaseDataSet.Subjects.Rows
             With dr
                 Dim lvItem As New ListViewItem(.Subject_Name, 0)
                 lvItem.SubItems.Add(.Teacher_Family_Name)
-
-                StudentGrades.subjectList.Items.AddRange(New ListViewItem() {lvItem}) 'Добавя учебният предмет към списъкът с предмети
+                'Добавя учебният предмет към списъкът с предмети
+                StudentGrades.subjectList.Items.AddRange(New ListViewItem() {lvItem})
             End With
         Next
         StudentGrades.subjectList.Sorting = SortOrder.Ascending

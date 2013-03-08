@@ -442,7 +442,7 @@ WHERE        ([Student Name] = ?)</CommandText>
   <xs:element name="ElectronicDiaryDatabaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ElectronicDiaryDatabaseDataSet" msprop:Generator_UserDSName="ElectronicDiaryDatabaseDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Accounts" msprop:Generator_TableClassName="AccountsDataTable" msprop:Generator_TableVarName="tableAccounts" msprop:Generator_RowChangedName="AccountsRowChanged" msprop:Generator_TablePropName="Accounts" msprop:Generator_RowDeletingName="AccountsRowDeleting" msprop:Generator_RowChangingName="AccountsRowChanging" msprop:Generator_RowEvHandlerName="AccountsRowChangeEventHandler" msprop:Generator_RowDeletedName="AccountsRowDeleted" msprop:Generator_RowClassName="AccountsRow" msprop:Generator_UserTableName="Accounts" msprop:Generator_RowEvArgName="AccountsRowChangeEvent">
+        <xs:element name="Accounts" msprop:Generator_TableClassName="AccountsDataTable" msprop:Generator_TableVarName="tableAccounts" msprop:Generator_TablePropName="Accounts" msprop:Generator_RowDeletingName="AccountsRowDeleting" msprop:Generator_RowChangingName="AccountsRowChanging" msprop:Generator_RowEvHandlerName="AccountsRowChangeEventHandler" msprop:Generator_RowDeletedName="AccountsRowDeleted" msprop:Generator_UserTableName="Accounts" msprop:Generator_RowChangedName="AccountsRowChanged" msprop:Generator_RowEvArgName="AccountsRowChangeEvent" msprop:Generator_RowClassName="AccountsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -463,7 +463,7 @@ WHERE        ([Student Name] = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Message_x0020_Log_x0020_To_x0020_Parents" msprop:Generator_TableClassName="Message_Log_To_ParentsDataTable" msprop:Generator_TableVarName="tableMessage_Log_To_Parents" msprop:Generator_RowChangedName="Message_Log_To_ParentsRowChanged" msprop:Generator_TablePropName="Message_Log_To_Parents" msprop:Generator_RowDeletingName="Message_Log_To_ParentsRowDeleting" msprop:Generator_RowChangingName="Message_Log_To_ParentsRowChanging" msprop:Generator_RowEvHandlerName="Message_Log_To_ParentsRowChangeEventHandler" msprop:Generator_RowDeletedName="Message_Log_To_ParentsRowDeleted" msprop:Generator_RowClassName="Message_Log_To_ParentsRow" msprop:Generator_UserTableName="Message Log To Parents" msprop:Generator_RowEvArgName="Message_Log_To_ParentsRowChangeEvent">
+        <xs:element name="Message_x0020_Log_x0020_To_x0020_Parents" msprop:Generator_TableClassName="Message_Log_To_ParentsDataTable" msprop:Generator_TableVarName="tableMessage_Log_To_Parents" msprop:Generator_TablePropName="Message_Log_To_Parents" msprop:Generator_RowDeletingName="Message_Log_To_ParentsRowDeleting" msprop:Generator_RowChangingName="Message_Log_To_ParentsRowChanging" msprop:Generator_RowEvHandlerName="Message_Log_To_ParentsRowChangeEventHandler" msprop:Generator_RowDeletedName="Message_Log_To_ParentsRowDeleted" msprop:Generator_UserTableName="Message Log To Parents" msprop:Generator_RowChangedName="Message_Log_To_ParentsRowChanged" msprop:Generator_RowEvArgName="Message_Log_To_ParentsRowChangeEvent" msprop:Generator_RowClassName="Message_Log_To_ParentsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -479,7 +479,7 @@ WHERE        ([Student Name] = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Message_x0020_Log_x0020_To_x0020_Students" msprop:Generator_TableClassName="Message_Log_To_StudentsDataTable" msprop:Generator_TableVarName="tableMessage_Log_To_Students" msprop:Generator_RowChangedName="Message_Log_To_StudentsRowChanged" msprop:Generator_TablePropName="Message_Log_To_Students" msprop:Generator_RowDeletingName="Message_Log_To_StudentsRowDeleting" msprop:Generator_RowChangingName="Message_Log_To_StudentsRowChanging" msprop:Generator_RowEvHandlerName="Message_Log_To_StudentsRowChangeEventHandler" msprop:Generator_RowDeletedName="Message_Log_To_StudentsRowDeleted" msprop:Generator_RowClassName="Message_Log_To_StudentsRow" msprop:Generator_UserTableName="Message Log To Students" msprop:Generator_RowEvArgName="Message_Log_To_StudentsRowChangeEvent">
+        <xs:element name="Message_x0020_Log_x0020_To_x0020_Students" msprop:Generator_TableClassName="Message_Log_To_StudentsDataTable" msprop:Generator_TableVarName="tableMessage_Log_To_Students" msprop:Generator_TablePropName="Message_Log_To_Students" msprop:Generator_RowDeletingName="Message_Log_To_StudentsRowDeleting" msprop:Generator_RowChangingName="Message_Log_To_StudentsRowChanging" msprop:Generator_RowEvHandlerName="Message_Log_To_StudentsRowChangeEventHandler" msprop:Generator_RowDeletedName="Message_Log_To_StudentsRowDeleted" msprop:Generator_UserTableName="Message Log To Students" msprop:Generator_RowChangedName="Message_Log_To_StudentsRowChanged" msprop:Generator_RowEvArgName="Message_Log_To_StudentsRowChangeEvent" msprop:Generator_RowClassName="Message_Log_To_StudentsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -495,7 +495,7 @@ WHERE        ([Student Name] = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Student_x0020_Data" msprop:Generator_TableClassName="Student_DataDataTable" msprop:Generator_TableVarName="tableStudent_Data" msprop:Generator_RowChangedName="Student_DataRowChanged" msprop:Generator_TablePropName="Student_Data" msprop:Generator_RowDeletingName="Student_DataRowDeleting" msprop:Generator_RowChangingName="Student_DataRowChanging" msprop:Generator_RowEvHandlerName="Student_DataRowChangeEventHandler" msprop:Generator_RowDeletedName="Student_DataRowDeleted" msprop:Generator_RowClassName="Student_DataRow" msprop:Generator_UserTableName="Student Data" msprop:Generator_RowEvArgName="Student_DataRowChangeEvent">
+        <xs:element name="Student_x0020_Data" msprop:Generator_TableClassName="Student_DataDataTable" msprop:Generator_TableVarName="tableStudent_Data" msprop:Generator_TablePropName="Student_Data" msprop:Generator_RowDeletingName="Student_DataRowDeleting" msprop:Generator_RowChangingName="Student_DataRowChanging" msprop:Generator_RowEvHandlerName="Student_DataRowChangeEventHandler" msprop:Generator_RowDeletedName="Student_DataRowDeleted" msprop:Generator_UserTableName="Student Data" msprop:Generator_RowChangedName="Student_DataRowChanged" msprop:Generator_RowEvArgName="Student_DataRowChangeEvent" msprop:Generator_RowClassName="Student_DataRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Student_x0020_ID" msprop:Generator_ColumnVarNameInTable="columnStudent_ID" msprop:Generator_ColumnPropNameInRow="Student_ID" msprop:Generator_ColumnPropNameInTable="Student_IDColumn" msprop:Generator_UserColumnName="Student ID" type="xs:int" minOccurs="0" />
@@ -616,7 +616,7 @@ WHERE        ([Student Name] = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Subjects" msprop:Generator_TableClassName="SubjectsDataTable" msprop:Generator_TableVarName="tableSubjects" msprop:Generator_RowChangedName="SubjectsRowChanged" msprop:Generator_TablePropName="Subjects" msprop:Generator_RowDeletingName="SubjectsRowDeleting" msprop:Generator_RowChangingName="SubjectsRowChanging" msprop:Generator_RowEvHandlerName="SubjectsRowChangeEventHandler" msprop:Generator_RowDeletedName="SubjectsRowDeleted" msprop:Generator_RowClassName="SubjectsRow" msprop:Generator_UserTableName="Subjects" msprop:Generator_RowEvArgName="SubjectsRowChangeEvent">
+        <xs:element name="Subjects" msprop:Generator_TableClassName="SubjectsDataTable" msprop:Generator_TableVarName="tableSubjects" msprop:Generator_TablePropName="Subjects" msprop:Generator_RowDeletingName="SubjectsRowDeleting" msprop:Generator_RowChangingName="SubjectsRowChanging" msprop:Generator_RowEvHandlerName="SubjectsRowChangeEventHandler" msprop:Generator_RowDeletedName="SubjectsRowDeleted" msprop:Generator_UserTableName="Subjects" msprop:Generator_RowChangedName="SubjectsRowChanged" msprop:Generator_RowEvArgName="SubjectsRowChangeEvent" msprop:Generator_RowClassName="SubjectsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Subject_x0020_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSubject_ID" msprop:Generator_ColumnPropNameInRow="Subject_ID" msprop:Generator_ColumnPropNameInTable="Subject_IDColumn" msprop:Generator_UserColumnName="Subject ID" type="xs:int" />
@@ -645,7 +645,7 @@ WHERE        ([Student Name] = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Summary_x0020_Log" msprop:Generator_TableClassName="Summary_LogDataTable" msprop:Generator_TableVarName="tableSummary_Log" msprop:Generator_RowChangedName="Summary_LogRowChanged" msprop:Generator_TablePropName="Summary_Log" msprop:Generator_RowDeletingName="Summary_LogRowDeleting" msprop:Generator_RowChangingName="Summary_LogRowChanging" msprop:Generator_RowEvHandlerName="Summary_LogRowChangeEventHandler" msprop:Generator_RowDeletedName="Summary_LogRowDeleted" msprop:Generator_RowClassName="Summary_LogRow" msprop:Generator_UserTableName="Summary Log" msprop:Generator_RowEvArgName="Summary_LogRowChangeEvent">
+        <xs:element name="Summary_x0020_Log" msprop:Generator_TableClassName="Summary_LogDataTable" msprop:Generator_TableVarName="tableSummary_Log" msprop:Generator_TablePropName="Summary_Log" msprop:Generator_RowDeletingName="Summary_LogRowDeleting" msprop:Generator_RowChangingName="Summary_LogRowChanging" msprop:Generator_RowEvHandlerName="Summary_LogRowChangeEventHandler" msprop:Generator_RowDeletedName="Summary_LogRowDeleted" msprop:Generator_UserTableName="Summary Log" msprop:Generator_RowChangedName="Summary_LogRowChanged" msprop:Generator_RowEvArgName="Summary_LogRowChangeEvent" msprop:Generator_RowClassName="Summary_LogRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Summary_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnSummary_Date" msprop:Generator_ColumnPropNameInRow="Summary_Date" msprop:Generator_ColumnPropNameInTable="Summary_DateColumn" msprop:Generator_UserColumnName="Summary Date" type="xs:dateTime" minOccurs="0" />
@@ -683,4 +683,9 @@ WHERE        ([Student Name] = ?)</CommandText>
       <xs:field xpath="mstns:Summary_x0020_ID" />
     </xs:unique>
   </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Message_x0020_Log_x0020_To_x0020_StudentsStudent_x0020_Data" msdata:parent="Message_x0020_Log_x0020_To_x0020_Students" msdata:child="Student_x0020_Data" msdata:parentkey="ID" msdata:childkey="Student_x0020_ID" msprop:Generator_UserChildTable="Student Data" msprop:Generator_ChildPropName="GetStudent_DataRows" msprop:Generator_UserRelationName="Message Log To StudentsStudent Data" msprop:Generator_ParentPropName="Message_Log_To_StudentsRow" msprop:Generator_RelationVarName="relationMessage_Log_To_StudentsStudent_Data" msprop:Generator_UserParentTable="Message Log To Students" />
+    </xs:appinfo>
+  </xs:annotation>
 </xs:schema>

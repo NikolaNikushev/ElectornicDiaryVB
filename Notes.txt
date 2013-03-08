@@ -1,0 +1,76 @@
+NESUOTVETSTVIE
+
+Note; SORTING MALFUNCTION ( no Chasovete gi otrkiva kato index ... 
+
+Functions 54 : ++ 1 ++ Trim
+
+Dim linesTrimmed As String = lines(i).Substring(0, 2)
+                            linesTrimmed = linesTrimmed.Trim()
+
+Functions 68 : ++ IF
+If Not (keyword = "") Then
+                                    locationToLoadAt.Items.Add(keyword)
+                                End If
+
+Functions 77: ++ Load Remark
+
+If condition = "remark" Then
+                    Dim linesCombine As String = ""
+                    For index = 0 To lines.Length - 1
+                        If lines(index).IndexOf(" _ ") > 0 Then
+                            linesCombined += lines(index).Substring(0, lines(index).IndexOf(" _ ")) + vbCrLf
+                        End If
+                    Next
+                    locationToLoadAt.Text = linesCombined
+                End If
+
+Functions 145: ++ If Not Empty
+
+If condition = "offline-Remark" Then
+            If Not (list.Text = "") Then
+
+AddSubject 33:
+
+' ????????? ???? ???????? ? ?? ?????? ? ???????
+        With subjectList
+            .Columns.Add("???????", 90, HorizontalAlignment.Left)
+            .Columns.Add("????????????", 90, HorizontalAlignment.Left)
+            .FullRowSelect = True
+            .GridLines = True
+            .MultiSelect = False
+            .View = View.Tile
+        End With
+
+        ' ????????? ???? ???????? ? ?? ?????? ? ???????
+        For Each dr As ElectronicDiaryDatabaseDataSet.SubjectsRow In ElectronicDiaryDatabaseDataSet.Subjects.Rows
+            With dr
+                Dim lvItem As New ListViewItem(.Subject_Name, 0)
+                lvItem.SubItems.Add(.Teacher_Family_Name)
+
+                subjectList.Items.AddRange(New ListViewItem() {lvItem})
+            End With
+        Next
+        subjectList.Sorting = SortOrder.Ascending
+
+AddStudent 12:
+
+StudentGrades.subjectList.Clear()
+        With StudentGrades.subjectList
+            .Columns.Add("???????", 90, HorizontalAlignment.Left)
+            .Columns.Add("????????????", 90, HorizontalAlignment.Left)
+            .FullRowSelect = True
+            .GridLines = True
+            .MultiSelect = False
+            .View = View.Tile
+        End With
+
+        ' ????????? ???? ???????? ? ?? ?????? ? ???????
+        For Each dr As ElectronicDiaryDatabaseDataSet.SubjectsRow In ElectronicDiaryDatabaseDataSet.Subjects.Rows
+            With dr
+                Dim lvItem As New ListViewItem(.Subject_Name, 0)
+                lvItem.SubItems.Add(.Teacher_Family_Name)
+                '?????? ???????? ??????? ??? ???????? ? ????????
+                StudentGrades.subjectList.Items.AddRange(New ListViewItem() {lvItem})
+            End With
+        Next
+        StudentGrades.subjectList.Sorting = SortOrder.Ascending
