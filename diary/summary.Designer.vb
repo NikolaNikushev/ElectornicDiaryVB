@@ -34,7 +34,7 @@ Partial Class summary
         Me.summaryView.Alignment = System.Windows.Forms.ListViewAlignment.Left
         Me.summaryView.Location = New System.Drawing.Point(4, 29)
         Me.summaryView.Name = "summaryView"
-        Me.summaryView.Size = New System.Drawing.Size(269, 201)
+        Me.summaryView.Size = New System.Drawing.Size(287, 209)
         Me.summaryView.TabIndex = 7
         Me.summaryView.TileSize = New System.Drawing.Size(250, 30)
         Me.summaryView.UseCompatibleStateImageBehavior = False
@@ -42,7 +42,7 @@ Partial Class summary
         '
         'forward
         '
-        Me.forward.Location = New System.Drawing.Point(197, 236)
+        Me.forward.Location = New System.Drawing.Point(216, 244)
         Me.forward.Name = "forward"
         Me.forward.Size = New System.Drawing.Size(75, 23)
         Me.forward.TabIndex = 6
@@ -51,7 +51,7 @@ Partial Class summary
         '
         'back
         '
-        Me.back.Location = New System.Drawing.Point(12, 236)
+        Me.back.Location = New System.Drawing.Point(12, 244)
         Me.back.Name = "back"
         Me.back.Size = New System.Drawing.Size(75, 23)
         Me.back.TabIndex = 5
@@ -62,7 +62,7 @@ Partial Class summary
         '
         Me.labelSummary.AutoSize = True
         Me.labelSummary.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.labelSummary.Location = New System.Drawing.Point(1, 9)
+        Me.labelSummary.Location = New System.Drawing.Point(22, 9)
         Me.labelSummary.Name = "labelSummary"
         Me.labelSummary.Size = New System.Drawing.Size(244, 17)
         Me.labelSummary.TabIndex = 4
@@ -72,7 +72,7 @@ Partial Class summary
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 268)
+        Me.ClientSize = New System.Drawing.Size(303, 279)
         Me.Controls.Add(Me.summaryView)
         Me.Controls.Add(Me.forward)
         Me.Controls.Add(Me.back)

@@ -4,7 +4,6 @@
             message.labelToWho.Text += item.Text + " " 'Изписва мейлите с разстояние 1 спация
         Next
 
-
     End Sub
     Private Sub finished_Click(sender As Object, e As EventArgs) Handles finished.Click
         functions.ShowFormHideCurrent(Me, summary)
@@ -24,22 +23,33 @@
         'Избрано е да се изпрати съобщение до всички родители на учениците
 
     End Sub
+
     'Изпраща съобщение до ученик
     Private Sub massageToStudent_Click(sender As Object, e As EventArgs) Handles messageToStudent.Click
         If functions.CheckSelectedEntry(studentList) Then
             Dim toWho As String
             toWho = studentList.SelectedItems(0).Text
+
             functions.MassageToWho(Me.Student_DataTableAdapter.MessageByStudent(toWho)) 'Избрано е да се изпрати съобщение до избрания ученик
             functions.ShowFormHideCurrent(Me, message)
         End If
     End Sub
+
     'Изпраща съобщение до родител
     Private Sub messageToParent_Click_1(sender As Object, e As EventArgs) Handles messageToParent.Click
         If functions.CheckSelectedEntry(studentList) Then
-            Dim toWho As String
+            Dim toWho, email As String
+            email = ""
             toWho = studentList.SelectedItems(0).Text
-
-            functions.MassageToWho(Me.Student_DataTableAdapter.MessageByParrent(toWho)) 'Избрано е да се изпрати съобщение до избрания родител
+            Dim counter As Integer = 0
+            For Each dr As ElectronicDiaryDatabaseDataSet.Student_DataRow In ElectronicDiaryDatabaseDataSet.Student_Data.Rows
+                If dr.Student_Name = toWho Then
+                    email = dr.Parent_Email_Address
+                    Exit For
+                End If
+                    counter += 1
+            Next
+            functions.MassageToWho(email) 'Избрано е да се изпрати съобщение до избрания родител
             functions.ShowFormHideCurrent(Me, message)
         End If
     End Sub
@@ -48,12 +58,16 @@
         functions.ShowFormHideCurrent(Me, addStudent)
     End Sub
 
+    'Потвърждавате ученикът и отивате на следващата форма
     Private Sub confirmChoice_Click(sender As Object, e As EventArgs) Handles confirmChoice.Click
         If functions.CheckSelectedEntry(studentList) Then
             StudentGrades.labelCurrentStudent.Text = studentList.SelectedItems(0).Text
             StudentGrades.labelStudentNumber.Text = studentList.SelectedIndices(0) + 1
             functions.ShowFormHideCurrent(Me, StudentGrades)
         End If
+        'Изчислява средният успех на ученикът
+        functions.GetAverage(StudentGrades.labelStudentNumber, StudentGrades.labelCurrentSubjectNumber, StudentGrades.studentGradesList, StudentGrades.subjectList, StudentGrades.AverageScore)
+        StudentGrades.AverageGrade.Text = "0"
     End Sub
 
     Private Sub StudentSelection_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
@@ -102,6 +116,7 @@
                 Invisible.Items.AddRange(New ListViewItem() {mails})
             End With
         Next
+
         With InvisibleParents
             .Columns.Add("email", 90, HorizontalAlignment.Left)
             .FullRowSelect = True

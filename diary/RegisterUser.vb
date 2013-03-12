@@ -1,11 +1,14 @@
 ﻿Public Class RegisterUser
 
+
     Private Sub Register_Click(sender As Object, e As EventArgs) Handles Register.Click
+
         Me.Validate()
         Me.AccountsBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.ElectronicDiaryDatabaseDataSet) 'Запазва потребителят в базата данни
         MsgBox("Вие успешно се регистрирахте! Сега влезте в системата с Вашият потребител!")
         functions.ShowFormHideCurrent(Me, login)
+
     End Sub
 
     Private Sub Back_Click(sender As Object, e As EventArgs) Handles Back.Click
@@ -18,9 +21,8 @@
 
 
     Private Sub RegisterUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'ElectronicDiaryDatabaseDataSet.Accounts' table. You can move, or remove it, as needed.
-        Me.AccountsTableAdapter.Fill(Me.ElectronicDiaryDatabaseDataSet.Accounts)
-        'TODO: This line of code loads data into the 'ElectronicDiaryDatabaseDataSet.Accounts' table. You can move, or remove it, as needed.
+
+        'TODO: This line of code loads data into the 'ElectronicDiaryDatabaseDataSet.Accounts'
         Me.AccountsTableAdapter.Fill(Me.ElectronicDiaryDatabaseDataSet.Accounts)
 
     End Sub

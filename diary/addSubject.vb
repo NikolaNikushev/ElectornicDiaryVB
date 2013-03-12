@@ -5,11 +5,14 @@
         Me.SubjectsBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.ElectronicDiaryDatabaseDataSet) 'Запазва предметът към базата данни
         Dim subject As String
+
         subject = Subject_NameTextBox.Text
         summary.summaryView.Items.Add("Добавен час:" & subject)
         functions.ShowFormHideCurrent(Me, StudentGrades) 'Добавя промяната към крайният отчет.
         StudentGrades.SubjectsTableAdapter.Fill(StudentGrades.ElectronicDiaryDatabaseDataSet.Subjects)
         StudentGrades.subjectList.Clear()
+
+        'Пълни информацията в ListView
         With StudentGrades.subjectList
             .Columns.Add("Предмет", 90, HorizontalAlignment.Left)
             .Columns.Add("Преподавател", 90, HorizontalAlignment.Left)
@@ -33,18 +36,18 @@
 
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
         functions.ShowFormHideCurrent(Me, StudentGrades)
+
     End Sub
 
     Private Sub addSubject_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Application.Exit()
+
     End Sub
 
     Private Sub addSubject_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'ElectronicDiaryDatabaseDataSet.Subjects' table.
         Me.SubjectsTableAdapter.Fill(Me.ElectronicDiaryDatabaseDataSet.Subjects)
 
-
     End Sub
-
 
 End Class

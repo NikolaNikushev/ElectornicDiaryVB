@@ -1,11 +1,12 @@
 ﻿Imports System.Net.Mail
-
+Imports System.Math
 Public Class functions
 
     'Скрива сегашната форма и показва следващата
     Public Shared Sub ShowFormHideCurrent(ByVal hideObject As Windows.Forms.Form, ByVal showObject As Windows.Forms.Form)
-        hideObject.Hide()
-        showObject.Show()
+            hideObject.Hide()
+            showObject.Show()
+
     End Sub
 
     'Добавя информацията към крайният отчет.
@@ -93,12 +94,14 @@ Public Class functions
     'Оценки
     Public Shared Sub WriteToDiary(ByVal condition As String, ByVal list As Object, ByVal studentNumber As Integer)
         If condition = "grade" Then
-            Dim writingText As String = ""
-            While Not (constants.grades.Contains(Val(writingText)))
+            Dim writingText As String = " "
+            While Not (constants.grades.Contains(Val(writingText)) Or writingText = "")
                 writingText = InputBox("Моля въведете оценка ( 2, 3, 4, 5, 6 )", "Въвеждане на Оценка")
             End While
-            summary.summaryView.Items.Add("Добавенa оценка на Номер " & studentNumber & "по " & StudentGrades.labelCurrentSubject.Text & ":" & writingText)
-            list.Items.Add(writingText)
+            If Not (writingText = "") Then
+                summary.summaryView.Items.Add("Добавенa оценка на Номер " & studentNumber & " по " & StudentGrades.labelCurrentSubject.Text & ":" & writingText)
+                list.Items.Add(writingText)
+            End If
         End If
 
         'Отсъствия
@@ -106,11 +109,12 @@ Public Class functions
             Dim writingText As String = " "
             While Not (constants.absence.Contains(writingText))
                 writingText = InputBox("Моля въведете вид на отсъствието ( 1/3 , 'пълно' )", "Въвеждане на Отсъствие")
+                writingText = writingText.ToLower()
             End While
             If Not (writingText = "") Then
 
                 list.Items.Add(writingText)
-                summary.summaryView.Items.Add("Добавено отсъствие на Номер " & studentNumber & "по " & StudentGrades.labelCurrentSubject.Text & ":" & writingText)
+                summary.summaryView.Items.Add("Добавено отсъствие на Номер " & studentNumber & " по " & StudentGrades.labelCurrentSubject.Text & ":" & writingText)
             End If
         End If
     End Sub
@@ -167,6 +171,7 @@ Public Class functions
         End If
     End Sub
 
+    'Сменя задният цвят на формата
     Public Shared Sub BackColor(ByVal form As Windows.Forms.Form, ByVal color As Object)
         form.BackColor = color
     End Sub
@@ -216,4 +221,76 @@ Public Class functions
         End If
 
     End Sub
+
+    'Пресмята средният успех по предмет
+    Public Shared Sub AverageGrade(ByVal list As ListView, ByVal showDetailsAt As Label)
+        Dim counter As Integer = 0
+        Dim sumGrades As Double = 0
+        For Each item As Object In list.Items
+            counter += 1
+            sumGrades += item.text
+
+        Next
+        If sumGrades < 2 Then
+            sumGrades = 0
+            showDetailsAt.Text = sumGrades
+        Else
+            showDetailsAt.Text = (Double.Parse(sumGrades / counter)).ToString("0.00")
+        End If
+
+
+    End Sub
+
+    'Пресмята общият брой отсъствия
+
+    Public Shared Sub AbsenceSum(ByVal list As ListView, ByVal showDetailsAt As Label)
+
+        Dim sum As Integer = 0
+        Dim counterThirds As Integer = 0
+        For Each item As Object In list.Items
+            If item.text = "пълно" Then
+                sum += 1
+            End If
+            If item.text = "1/3" Then
+                counterThirds += 1
+            End If
+
+        Next
+
+        Dim fulls As Double = 0
+        Dim thirds As Integer = 0
+        fulls = counterThirds Mod 3
+
+        fulls = (Truncate(counterThirds / 3))
+
+        thirds = counterThirds Mod 3
+        If fulls > 0 Then
+            sum += fulls
+        End If
+        If thirds > 0 Then
+            showDetailsAt.Text = sum & " " & thirds & "/" & "3"
+        Else : showDetailsAt.Text = sum
+        End If
+
+    End Sub
+
+    'Намира средният успех на ученикът по всички предмети
+    Public Shared Sub GetAverage(ByVal studentNumber As Object, ByVal currentSubject As Object, ByVal gradeList As Object, ByVal subjectList As Object, ByVal averageScore As Object)
+        Dim directory As String
+
+        directory = studentNumber.Text & "_" & currentSubject.Text
+
+        Dim sum As Double = 0
+        For index = 1 To subjectList.Items.Count
+            directory = studentNumber.Text & "_" & index.ToString()
+            functions.ReadFile(directory, "studentGrades.txt", gradeList, "grade")
+            functions.AverageGrade(gradeList, averageScore)
+            sum += Val(averageScore.Text)
+
+        Next
+
+        sum /= subjectList.Items.Count
+        averageScore.Text = sum.ToString("0.00")
+    End Sub
+
 End Class

@@ -1,5 +1,7 @@
 ﻿Public Class login
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles buttonLogin.Click
+
+
+    Private Sub buttonLogin_Click(sender As Object, e As EventArgs) Handles buttonLogin.Click
         Dim passwordInput, userNameInput As String
         userNameInput = username.Text
         passwordInput = password.Text
@@ -17,7 +19,7 @@
         Application.Exit()
     End Sub
 
- 
+
 
     Private Sub login_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.Enter Then

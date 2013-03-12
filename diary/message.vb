@@ -17,6 +17,7 @@ Public Class message
         Application.Exit()
     End Sub
 
+    'Зарежда информацията до кого ще се праща писмото
     Private Sub message_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim splits As String
         splits = labelToWho.Text

@@ -41,15 +41,21 @@ Partial Class StudentGrades
         Me.addAbsence = New System.Windows.Forms.Button()
         Me.removeAbsence = New System.Windows.Forms.Button()
         Me.removeGrade = New System.Windows.Forms.Button()
-        Me.ElectronicDiaryDatabaseDataSet = New diary.ElectronicDiaryDatabaseDataSet()
-        Me.SubjectsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SubjectsTableAdapter = New diary.ElectronicDiaryDatabaseDataSetTableAdapters.SubjectsTableAdapter()
-        Me.TableAdapterManager = New diary.ElectronicDiaryDatabaseDataSetTableAdapters.TableAdapterManager()
         Me.labelCurrentSubject = New System.Windows.Forms.Label()
         Me.labelCurrentSubjectNumber = New System.Windows.Forms.Label()
         Me.labelInfoNumber = New System.Windows.Forms.Label()
         Me.labelStudentNumber = New System.Windows.Forms.Label()
         Me.back = New System.Windows.Forms.Button()
+        Me.Average = New System.Windows.Forms.Label()
+        Me.AverageScore = New System.Windows.Forms.Label()
+        Me.AverageGrade = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.AbsenceSums = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.ElectronicDiaryDatabaseDataSet = New diary.ElectronicDiaryDatabaseDataSet()
+        Me.SubjectsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SubjectsTableAdapter = New diary.ElectronicDiaryDatabaseDataSetTableAdapters.SubjectsTableAdapter()
+        Me.TableAdapterManager = New diary.ElectronicDiaryDatabaseDataSetTableAdapters.TableAdapterManager()
         CType(Me.ElectronicDiaryDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SubjectsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -57,7 +63,7 @@ Partial Class StudentGrades
         'labelRemarks
         '
         Me.labelRemarks.AutoSize = True
-        Me.labelRemarks.Location = New System.Drawing.Point(375, 93)
+        Me.labelRemarks.Location = New System.Drawing.Point(379, 117)
         Me.labelRemarks.Name = "labelRemarks"
         Me.labelRemarks.Size = New System.Drawing.Size(64, 13)
         Me.labelRemarks.TabIndex = 34
@@ -65,9 +71,9 @@ Partial Class StudentGrades
         '
         'remarksView
         '
-        Me.remarksView.Location = New System.Drawing.Point(302, 118)
+        Me.remarksView.Location = New System.Drawing.Point(302, 133)
         Me.remarksView.Name = "remarksView"
-        Me.remarksView.Size = New System.Drawing.Size(227, 138)
+        Me.remarksView.Size = New System.Drawing.Size(227, 163)
         Me.remarksView.TabIndex = 33
         Me.remarksView.Text = ""
         '
@@ -93,7 +99,7 @@ Partial Class StudentGrades
         'labelStudentAbsence
         '
         Me.labelStudentAbsence.AutoSize = True
-        Me.labelStudentAbsence.Location = New System.Drawing.Point(5, 179)
+        Me.labelStudentAbsence.Location = New System.Drawing.Point(11, 198)
         Me.labelStudentAbsence.Name = "labelStudentAbsence"
         Me.labelStudentAbsence.Size = New System.Drawing.Size(62, 13)
         Me.labelStudentAbsence.TabIndex = 29
@@ -120,7 +126,7 @@ Partial Class StudentGrades
         '
         'subjectAddEditRemove
         '
-        Me.subjectAddEditRemove.Location = New System.Drawing.Point(160, 215)
+        Me.subjectAddEditRemove.Location = New System.Drawing.Point(163, 255)
         Me.subjectAddEditRemove.Name = "subjectAddEditRemove"
         Me.subjectAddEditRemove.Size = New System.Drawing.Size(136, 41)
         Me.subjectAddEditRemove.TabIndex = 20
@@ -129,7 +135,7 @@ Partial Class StudentGrades
         '
         'save
         '
-        Me.save.Location = New System.Drawing.Point(-2, 224)
+        Me.save.Location = New System.Drawing.Point(1, 264)
         Me.save.Name = "save"
         Me.save.Size = New System.Drawing.Size(75, 23)
         Me.save.TabIndex = 19
@@ -157,21 +163,21 @@ Partial Class StudentGrades
         '
         Me.studentGradesList.Location = New System.Drawing.Point(79, 121)
         Me.studentGradesList.Name = "studentGradesList"
-        Me.studentGradesList.Size = New System.Drawing.Size(121, 41)
+        Me.studentGradesList.Size = New System.Drawing.Size(121, 25)
         Me.studentGradesList.TabIndex = 43
         Me.studentGradesList.UseCompatibleStateImageBehavior = False
         '
         'studentAbsenceList
         '
-        Me.studentAbsenceList.Location = New System.Drawing.Point(79, 168)
+        Me.studentAbsenceList.Location = New System.Drawing.Point(79, 191)
         Me.studentAbsenceList.Name = "studentAbsenceList"
-        Me.studentAbsenceList.Size = New System.Drawing.Size(121, 41)
+        Me.studentAbsenceList.Size = New System.Drawing.Size(121, 25)
         Me.studentAbsenceList.TabIndex = 44
         Me.studentAbsenceList.UseCompatibleStateImageBehavior = False
         '
         'addGrade
         '
-        Me.addGrade.Location = New System.Drawing.Point(210, 133)
+        Me.addGrade.Location = New System.Drawing.Point(211, 121)
         Me.addGrade.Name = "addGrade"
         Me.addGrade.Size = New System.Drawing.Size(23, 23)
         Me.addGrade.TabIndex = 45
@@ -180,55 +186,30 @@ Partial Class StudentGrades
         '
         'addAbsence
         '
-        Me.addAbsence.Location = New System.Drawing.Point(210, 179)
+        Me.addAbsence.Location = New System.Drawing.Point(211, 191)
         Me.addAbsence.Name = "addAbsence"
-        Me.addAbsence.Size = New System.Drawing.Size(23, 20)
+        Me.addAbsence.Size = New System.Drawing.Size(23, 23)
         Me.addAbsence.TabIndex = 46
         Me.addAbsence.Text = "+"
         Me.addAbsence.UseVisualStyleBackColor = True
         '
         'removeAbsence
         '
-        Me.removeAbsence.Location = New System.Drawing.Point(249, 179)
+        Me.removeAbsence.Location = New System.Drawing.Point(250, 191)
         Me.removeAbsence.Name = "removeAbsence"
-        Me.removeAbsence.Size = New System.Drawing.Size(21, 20)
+        Me.removeAbsence.Size = New System.Drawing.Size(21, 23)
         Me.removeAbsence.TabIndex = 49
         Me.removeAbsence.Text = "-"
         Me.removeAbsence.UseVisualStyleBackColor = True
         '
         'removeGrade
         '
-        Me.removeGrade.Location = New System.Drawing.Point(249, 134)
+        Me.removeGrade.Location = New System.Drawing.Point(250, 122)
         Me.removeGrade.Name = "removeGrade"
         Me.removeGrade.Size = New System.Drawing.Size(21, 22)
         Me.removeGrade.TabIndex = 48
         Me.removeGrade.Text = "-"
         Me.removeGrade.UseVisualStyleBackColor = True
-        '
-        'ElectronicDiaryDatabaseDataSet
-        '
-        Me.ElectronicDiaryDatabaseDataSet.DataSetName = "ElectronicDiaryDatabaseDataSet"
-        Me.ElectronicDiaryDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'SubjectsBindingSource
-        '
-        Me.SubjectsBindingSource.DataMember = "Subjects"
-        Me.SubjectsBindingSource.DataSource = Me.ElectronicDiaryDatabaseDataSet
-        '
-        'SubjectsTableAdapter
-        '
-        Me.SubjectsTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.AccountsTableAdapter = Nothing
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.Message_Log_To_ParentsTableAdapter = Nothing
-        Me.TableAdapterManager.Message_Log_To_StudentsTableAdapter = Nothing
-        Me.TableAdapterManager.Student_DataTableAdapter = Nothing
-        Me.TableAdapterManager.SubjectsTableAdapter = Me.SubjectsTableAdapter
-        Me.TableAdapterManager.Summary_LogTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = diary.ElectronicDiaryDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'labelCurrentSubject
         '
@@ -267,18 +248,109 @@ Partial Class StudentGrades
         '
         'back
         '
-        Me.back.Location = New System.Drawing.Point(79, 224)
+        Me.back.Location = New System.Drawing.Point(82, 264)
         Me.back.Name = "back"
         Me.back.Size = New System.Drawing.Size(75, 23)
         Me.back.TabIndex = 54
         Me.back.Text = "Върни се"
         Me.back.UseVisualStyleBackColor = True
         '
+        'Average
+        '
+        Me.Average.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Average.Location = New System.Drawing.Point(5, 41)
+        Me.Average.MaximumSize = New System.Drawing.Size(200, 100)
+        Me.Average.Name = "Average"
+        Me.Average.Size = New System.Drawing.Size(106, 20)
+        Me.Average.TabIndex = 55
+        Me.Average.Text = "Среден успех:"
+        '
+        'AverageScore
+        '
+        Me.AverageScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AverageScore.Location = New System.Drawing.Point(106, 41)
+        Me.AverageScore.MaximumSize = New System.Drawing.Size(200, 100)
+        Me.AverageScore.Name = "AverageScore"
+        Me.AverageScore.Size = New System.Drawing.Size(65, 20)
+        Me.AverageScore.TabIndex = 56
+        Me.AverageScore.Text = "0,00"
+        '
+        'AverageGrade
+        '
+        Me.AverageGrade.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AverageGrade.Location = New System.Drawing.Point(116, 156)
+        Me.AverageGrade.MaximumSize = New System.Drawing.Size(200, 100)
+        Me.AverageGrade.Name = "AverageGrade"
+        Me.AverageGrade.Size = New System.Drawing.Size(99, 20)
+        Me.AverageGrade.TabIndex = 58
+        Me.AverageGrade.Text = "0,00"
+        '
+        'Label2
+        '
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(15, 156)
+        Me.Label2.MaximumSize = New System.Drawing.Size(200, 100)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(106, 20)
+        Me.Label2.TabIndex = 57
+        Me.Label2.Text = "Среден успех:"
+        '
+        'AbsenceSums
+        '
+        Me.AbsenceSums.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AbsenceSums.Location = New System.Drawing.Point(133, 229)
+        Me.AbsenceSums.MaximumSize = New System.Drawing.Size(200, 100)
+        Me.AbsenceSums.Name = "AbsenceSums"
+        Me.AbsenceSums.Size = New System.Drawing.Size(99, 20)
+        Me.AbsenceSums.TabIndex = 60
+        Me.AbsenceSums.Text = "0 0/0"
+        '
+        'Label4
+        '
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(12, 229)
+        Me.Label4.MaximumSize = New System.Drawing.Size(200, 100)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(131, 20)
+        Me.Label4.TabIndex = 59
+        Me.Label4.Text = "Брой отсъствия:"
+        '
+        'ElectronicDiaryDatabaseDataSet
+        '
+        Me.ElectronicDiaryDatabaseDataSet.DataSetName = "ElectronicDiaryDatabaseDataSet"
+        Me.ElectronicDiaryDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'SubjectsBindingSource
+        '
+        Me.SubjectsBindingSource.DataMember = "Subjects"
+        Me.SubjectsBindingSource.DataSource = Me.ElectronicDiaryDatabaseDataSet
+        '
+        'SubjectsTableAdapter
+        '
+        Me.SubjectsTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.AccountsTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Message_Log_To_ParentsTableAdapter = Nothing
+        Me.TableAdapterManager.Message_Log_To_StudentsTableAdapter = Nothing
+        Me.TableAdapterManager.Student_DataTableAdapter = Nothing
+        Me.TableAdapterManager.SubjectsTableAdapter = Me.SubjectsTableAdapter
+        Me.TableAdapterManager.Summary_LogTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = diary.ElectronicDiaryDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
         'StudentGrades
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(549, 259)
+        Me.ClientSize = New System.Drawing.Size(557, 300)
+        Me.Controls.Add(Me.AbsenceSums)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.AverageGrade)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.AverageScore)
+        Me.Controls.Add(Me.Average)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.labelStudentNumber)
         Me.Controls.Add(Me.labelInfoNumber)
@@ -331,9 +403,15 @@ Partial Class StudentGrades
     Private WithEvents addAbsence As System.Windows.Forms.Button
     Private WithEvents removeAbsence As System.Windows.Forms.Button
     Private WithEvents removeGrade As System.Windows.Forms.Button
-    Private WithEvents labelCurrentSubjectNumber As System.Windows.Forms.Label
     Public WithEvents labelInfoNumber As System.Windows.Forms.Label
     Public WithEvents labelStudentNumber As System.Windows.Forms.Label
     Private WithEvents back As System.Windows.Forms.Button
     Public WithEvents labelCurrentSubject As System.Windows.Forms.Label
+    Public WithEvents Average As System.Windows.Forms.Label
+    Public WithEvents AverageScore As System.Windows.Forms.Label
+    Public WithEvents AverageGrade As System.Windows.Forms.Label
+    Public WithEvents Label2 As System.Windows.Forms.Label
+    Public WithEvents AbsenceSums As System.Windows.Forms.Label
+    Public WithEvents Label4 As System.Windows.Forms.Label
+    Public WithEvents labelCurrentSubjectNumber As System.Windows.Forms.Label
 End Class
